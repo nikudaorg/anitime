@@ -1,0 +1,26 @@
+{
+  "aboutFestival": {
+    "title": "ABOUT FESTIVAL",
+    "content": "<b>ANITIME is a new animation festival in Tel Aviv,</b><br/>created by a team of young volunteers united by the idea of building a space where animation becomes a bridge between cultures and people.<br/><br/>The festival will take place at the <b>ANU Museum of the Jewish People on November 20th at 17:00</b>"
+  },
+  "inProgram": {
+    "title": "PROGRAM INCLUDES",
+    "content": "<ul><li><b>A competition of Israeli and international films</b> (from student projects to studio works)</li><li><b>Meetings</b> with directors</li><li><b>Workshops</b> for children and adults</li><li><b>Lectures</b> by renowned animators</li><li><b>A market</b> prepared by participants of <b>The Walks</b> project.</li></ul>"
+  },
+  "ourSponsorsTitle": "OUR SPONSORS",
+  "contactsTitle": "CONTACTS",
+  "menu": {
+    "submitYourFilm": "SUBMIT YOUR FILM",
+    "buyTickets": "BUY TICKETS",
+    "films": "FILMS",
+    "aboutFestival": "ABOUT FESTIVAL",
+    "marketParticipants": "MARKET PARTICIPANTS",
+    "team": "TEAM",
+    "ourSponsors": "OUR SPONSORS",
+    "contacts": "CONTACTS"
+  },
+  "banner": {
+    "time": "20 November 17:00",
+    "address": "ANU MUSEUM OF THE JEWISH PEOPLE"
+  }
+}
