@@ -1,11 +1,11 @@
 import redirectDefault from '@/app/redirectDefault';
 
-export default function DefaultPage({
+export default async function DefaultPage({
   params
 }: {
-  params: { url?: string[] };
+  params: Promise<{ url?: string[] }>;
 }) {
-  redirectDefault({ params });
+  redirectDefault({ params: await params });
 }
 
 export const dynamic = 'force-static';
