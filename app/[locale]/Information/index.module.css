@@ -1,0 +1,82 @@
+.information {
+  width: 100%;
+  color: var(--color-text-on-dark);
+}
+
+/* .information h2 {
+  font-size: 3.75rem;
+  margin: 2.52rem 0;
+  margin-top: 4.125rem;
+} */
+
+/* .information p {
+  font-size: 1.875rem;
+  line-height: 1.5em;
+} */
+
+.information h2 {
+  font-size: 1.5625rem;
+  margin: 2.52rem 0;
+  margin-top: 4.125rem;
+}
+
+.information p,
+.information ul {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+}
+
+@media (min-width: 48rem) {
+  .information h2 {
+    font-size: 5rem;
+    margin: 3.36rem 0;
+    margin-top: 5.5rem;
+  }
+
+  .information p,
+  .information ul {
+    font-size: 2.5rem;
+  }
+
+  /* .information p {
+    font-size: 1.66rem;
+  } */
+}
+
+.information section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.information section,
+.information h2,
+.information div,
+.information p,
+.information ul {
+  position: relative;
+}
+
+.center {
+  width: 80%;
+}
+
+@media (min-width: 64rem) {
+  .center {
+    width: 60vw; /*54rem / 90rem * 100vw*/
+  }
+}
+
+@media (min-width: 90rem) {
+  .center {
+    width: 54rem;
+  }
+}
+
+.sponsors h2 {
+  margin-bottom: 0.5em;
+}
+
+.information section:last-of-type {
+  padding-bottom: 3.36rem;
+}

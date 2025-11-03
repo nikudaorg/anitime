@@ -1,0 +1,178 @@
+.plug,
+.visible {
+  width: 100%;
+  height: 100%;
+  --animation-length: 0.5s;
+}
+
+.plug {
+  visibility: hidden;
+}
+
+.visible {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width var(--animation-length), top var(--animation-length),
+    left var(--animation-length);
+}
+
+.root {
+  background-color: var(--color-surface-muted);
+  border-radius: 3.125rem;
+  padding: 0.96rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.2rem;
+}
+
+@media (min-width: 75rem) {
+  .plug,
+  .visible {
+    width: 90%;
+  }
+  .root {
+    border-radius: 4.8rem;
+  }
+}
+
+.firstLine {
+  display: flex;
+
+  /* mobile */
+  column-gap: 2.4rem;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.secondLine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* mobile */
+  column-gap: 1.8rem;
+  row-gap: 0.9rem;
+}
+
+.root a {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  transition: border-radius var(--animation-length);
+}
+
+.firstLine a {
+  background-color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  line-height: 1.2;
+
+  white-space: wrap;
+  text-align: center;
+
+  /* mobile */
+  font-size: 1.188rem;
+  padding: 0.6rem;
+  border-radius: 6rem;
+}
+
+.secondLine a {
+  background-color: var(--color-surface-light);
+  white-space: wrap;
+  text-align: center;
+
+  /* mobile */
+  font-size: 1.35rem;
+  padding: 0.72rem 0.585rem;
+  border-radius: 1.35rem;
+}
+
+.visible.fixed {
+  width: 8rem;
+}
+
+@media (min-width: 28rem) {
+  .firstLine {
+    width: 90%;
+    gap: 1.2rem;
+  }
+  .secondLine {
+    column-gap: 2.4rem;
+    row-gap: 1.2rem;
+  }
+
+  .firstLine a {
+    font-size: 1.7496rem;
+    padding: 0.9rem 0;
+    width: 16.2rem;
+    border-radius: 9rem;
+  }
+
+  .secondLine a {
+    font-size: 1.8rem;
+    padding: 0.96rem 0.78rem;
+    border-radius: 1.8rem;
+  }
+  .visible.fixed {
+    width: 11rem;
+  }
+}
+
+@media (min-width: 54rem) {
+  .firstLine {
+    column-gap: 4.8rem;
+    justify-content: center;
+    width: unset;
+  }
+  .firstLine a {
+    font-size: 2.376rem;
+    padding: 1.2rem 0;
+    width: 21.6rem;
+    border-radius: 12rem;
+  }
+  .visible.fixed {
+    width: 13rem;
+  }
+}
+
+.visible.fixed {
+  position: fixed;
+  top: calc(100% - 1.5rem);
+  left: calc(100% - 3rem);
+  transform: translate(-100%, -100%);
+
+  height: auto;
+  z-index: 3;
+}
+
+.visible.fixed a {
+  display: none;
+}
+.visible.fixed .secondLine {
+  display: none;
+}
+
+.visible.fixed .buyTickets {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  display: inline;
+}
+
+.visible.fixed .firstLine {
+  width: 100%;
+}
+
+.visible.fixed .root {
+  padding: 0;
+}

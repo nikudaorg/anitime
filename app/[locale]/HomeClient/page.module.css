@@ -1,0 +1,11 @@
+.container {
+  font-style: normal;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-surface-dark);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}

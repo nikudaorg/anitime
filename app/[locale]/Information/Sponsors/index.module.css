@@ -1,0 +1,14 @@
+.root img {
+  width: clamp(100vw, calc(71.667vw + 362.667px), 185vw);
+  aspect-ratio: 2564 / 928;
+  flex-shrink: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%);
+  mask-image: linear-gradient(to bottom, transparent, black 30%);
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}

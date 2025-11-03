@@ -1,0 +1,77 @@
+.root {
+  /* height: 100%; */
+  position: relative;
+  width: 100%;
+}
+
+.root img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.date,
+.address {
+  position: absolute;
+  color: var(--color-text-on-dark);
+}
+
+@media (min-width: 75rem) {
+  .root img {
+    aspect-ratio: 2560/978;
+  }
+
+  .root {
+    max-height: 61.125rem;
+  }
+  .date {
+    font-size: 5.5vw;
+    top: 16.2vw;
+    left: 59.5vw;
+  }
+  .address {
+    font-size: 4.2vw;
+    top: 24vw;
+    left: 55.2vw;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 75rem) {
+  .root img {
+    aspect-ratio: 1560/1074;
+  }
+
+  .root {
+    max-height: 67.125rem;
+  }
+  .date {
+    font-size: 6.45vw;
+    top: 32.6vw;
+    left: 57.4vw;
+  }
+  .address {
+    font-size: 6vw;
+    top: 43vw;
+    left: 38vw;
+  }
+}
+
+@media (max-width: 48rem) {
+  .root img {
+    aspect-ratio: 640/600;
+  }
+
+  .root {
+    max-height: 37.5rem;
+  }
+  .date {
+    font-size: 7.5vw;
+    top: 45.3vw;
+    left: 47.8vw;
+  }
+  .address {
+    font-size: 6.25vw;
+    top: 55.5vw;
+    left: 25.3vw;
+  }
+}
