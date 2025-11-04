@@ -15,7 +15,12 @@ const AnitimeBanner = ({ locale }: { locale: Locale }) => {
         <img src={banner640x600.src} alt="Hero banner" />
       </picture>
       <div className={styles.date}>{messages.banner.time}</div>
-      <div className={styles.address}>{messages.banner.address}</div>
+      <div
+        className={styles.address}
+        style={locale === 'en' ? { transform: 'translateX(-2rem)' } : undefined}
+      >
+        {messages.banner.address}
+      </div>
     </div>
   );
 };
