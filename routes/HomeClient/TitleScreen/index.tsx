@@ -33,7 +33,6 @@ const TitleScreen = ({
   const [forceHeight, setForceHeight] = useState<string | undefined>('100vh');
 
   const onResize = useCallback(() => {
-    console.log('resize');
     setForceHeight(getForceHeight());
   }, [getForceHeight]);
 
