@@ -61,9 +61,17 @@
   width: 80%;
 }
 
+.information section:last-of-type {
+  padding-bottom: 6rem;
+}
+
+
 @media (min-width: 64rem) {
   .center {
     width: 60vw; /*54rem / 90rem * 100vw*/
+  }
+  .information section:last-of-type {
+    padding-bottom: 5rem;
   }
 }
 
@@ -75,8 +83,4 @@
 
 .sponsors h2 {
   margin-bottom: 0.5em;
-}
-
-.information section:last-of-type {
-  padding-bottom: 3.36rem;
 }
