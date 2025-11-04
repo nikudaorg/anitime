@@ -27,7 +27,7 @@
 .decoration {
   /* animation: spin 60s infinite linear;
   animation-play-state: paused; */
-  /* transition: transform 0.4s, top 0.4s, left 0.4s; */
+  transition: transform 0.4s, top 0.4s, left 0.4s;
   transform-origin: center center;
 
   --rotate: var(--start);

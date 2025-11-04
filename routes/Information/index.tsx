@@ -16,6 +16,7 @@ const Information = ({ locale }: { locale: Locale }) => {
     <div className={styles.information}>
       <section>
         <div className={styles.center} id="anitimeAbout">
+          <Deco l t22 x="-30%" y="-15%" rot="90deg" width="18%" loc={loc} />
           <Deco l t21 x="25%" y="-3%" rot="270deg" width="20%" flip loc={loc} />
           <Deco l t25 x="0%" y="-15%" rot="330deg" width="21%" flip loc={loc} />
           <Deco l t23 x="50%" y="0%" rot="170deg" width="21%" flip loc={loc} />
