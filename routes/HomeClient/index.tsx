@@ -19,6 +19,7 @@ export default function HomeClient({
     <div
       className={`${designScheme.designScheme} ${styles.container}`}
       ref={ref}
+      style={locale === 'he' ? { direction: 'rtl' } : undefined}
     >
       <TitleScreen
         listenScroll={(cb: () => void) => {
