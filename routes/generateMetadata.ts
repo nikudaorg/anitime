@@ -1,6 +1,5 @@
 import { Locale, Messages, getMessages } from '@/i18n';
 import locales from '@/locales';
-import { Metadata } from 'next';
 
 type SEO = {
   title: string;
@@ -9,12 +8,7 @@ type SEO = {
 
 export const metadataGen =
   (path: `/${string}`, getSEO: (messages: Messages) => SEO) =>
-  async ({
-    params
-  }: {
-    params: Promise<{ locale: Locale }>;
-  }): Promise<Metadata> => {
-    const myLocale = (await params).locale;
+  (myLocale: Locale) => {
     const messages = getMessages(myLocale);
     const seo = getSEO(messages);
 

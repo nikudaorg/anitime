@@ -54,6 +54,7 @@ const Links = ({
   const plugRef = useRef<HTMLDivElement>(null);
 
   const onScroll = useCallback(() => {
+    if (!plugRef.current) return () => undefined;
     const rect = plugRef.current!.getBoundingClientRect();
     if (!isFixedRef.current! && rect.top < 10) {
       setIsFixed(true);

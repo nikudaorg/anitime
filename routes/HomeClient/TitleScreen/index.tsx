@@ -17,8 +17,8 @@ const TitleScreen = ({
   const linksRef = useRef<HTMLDivElement>(null);
 
   const getForceHeight = useCallback(() => {
+    // if (!ref.current) return () => undefined;
     const linksHeight = linksRef.current!.getBoundingClientRect().height;
-    // const firstScreenHeight = ref.current!.getBoundingClientRect().height;
     if (
       window.innerHeight / linksHeight > 2.5 &&
       window.innerWidth >

@@ -5,7 +5,6 @@ import facebookIcon from '@/assets/icons/facebook.svg';
 import telegramIcon from '@/assets/icons/telegram.svg';
 
 const Contacts = () => {
-  console.log('asd', facebookIcon);
   return (
     <div className={styles.contacts}>
       <div className={styles.icons}>

@@ -22,8 +22,12 @@ export default function HomeClient({
     >
       <TitleScreen
         listenScroll={(cb: () => void) => {
+          if (!ref.current) return () => undefined;
           ref.current!.addEventListener('scroll', cb);
-          return () => ref.current!.removeEventListener('scroll', cb);
+          return () => {
+            if (!ref.current) return () => undefined;
+            ref.current!.removeEventListener('scroll', cb);
+          };
         }}
         locale={locale}
       />
