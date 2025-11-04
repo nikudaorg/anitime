@@ -1,0 +1,52 @@
+.any {
+  display: none;
+}
+
+.xxs {
+  display: contents;
+}
+
+@media (min-width: 20rem) {
+  .xxs {
+    display: none;
+  }
+  .xs {
+    display: contents;
+  }
+}
+
+@media (min-width: 34rem) {
+  .xs {
+    display: none;
+  }
+  .s {
+    display: contents;
+  }
+}
+
+@media (min-width: 48rem) {
+  .s {
+    display: none;
+  }
+  .m {
+    display: contents;
+  }
+}
+
+@media (min-width: 64rem) {
+  .m {
+    display: none;
+  }
+  .l {
+    display: contents;
+  }
+}
+/* 
+@media (min-width: 90rem) {
+  .l {
+    display: none;
+  }
+  .xl {
+    display: contents;
+  }
+} */

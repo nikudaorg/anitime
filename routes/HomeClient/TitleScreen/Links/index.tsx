@@ -17,7 +17,7 @@ const useLinks = (locale: Locale) => {
           {messages.menu.submitYourFilm}
         </a>
         <a
-          href="https://www.anumuseum.org.il/ru/events/animation-films/"
+          href={messages.buyTicketsLink}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.buyTickets}

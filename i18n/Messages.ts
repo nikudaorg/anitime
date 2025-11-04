@@ -5,6 +5,8 @@ export type Messages = {
     title: string;
     description: string;
   };
+  buyTicketsLink: string;
+  emailCopied: string;
   aboutFestival: {
     title: string;
     content: ReactNode;

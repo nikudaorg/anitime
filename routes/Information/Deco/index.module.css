@@ -1,0 +1,48 @@
+/* @keyframes spin {
+  0% {
+    filter: drop-shadow(0 1px 0px rgba(255, 255, 255, 0.35));
+  }
+  40% {
+    filter: drop-shadow(0 1px 40px rgba(255, 255, 255, 0));
+  }
+  60% {
+    filter: drop-shadow(0 1px 5px rgba(255, 255, 255, 0));
+  }
+  100% {
+    filter: drop-shadow(0 1px 0px rgba(255, 255, 255, 0.35));
+  }
+  /* 100% {
+    filter: drop-shadow(0 1px 5px rgba(255, 255, 255, 0.35));
+  } */
+/* 
+@keyframes spin {
+  from {
+    rotate: calc(-360deg + var(--start));
+  }
+  to {
+    rotate: var(--start);
+  }
+} */
+
+.decoration {
+  /* animation: spin 60s infinite linear;
+  animation-play-state: paused; */
+  /* transition: transform 0.4s, top 0.4s, left 0.4s; */
+  transform-origin: center center;
+
+  --rotate: var(--start);
+
+  --x: 0px;
+  --y: 0px;
+  --scaleX: 1;
+  --scaleY: 1;
+
+  transform: translate(var(--x), var(--y)) rotate(var(--rotate))
+    scale(var(--scaleX), var(--scaleY));
+
+  position: absolute;
+}
+
+.decoration:hover {
+  --rotate: calc(var(--start) - 10deg);
+}

@@ -5,14 +5,16 @@ export default {
     title: 'Anitime',
     description: 'todo'
   },
+  buyTicketsLink: 'https://www.anumuseum.org.il/ru/events/animation-films/',
+  emailCopied: 'Email скопирован',
   aboutFestival: {
     title: 'О ФЕСТИВАЛЕ',
     content: (
       <p>
         <strong>ANITIME — новый фестиваль анимации в Тель-Авиве,</strong>
         <br />
-        Создан командой молодых волонтёров, как пространство, <br />
-        где анимация становится мостом между культурами и людьми.
+        Создан командой молодых волонтёров, как пространство, где анимация
+        становится мостом между культурами и людьми.
         <br />
         <br />
         Ждем вас в{' '}

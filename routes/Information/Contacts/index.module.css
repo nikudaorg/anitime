@@ -30,6 +30,8 @@
 }
 .email {
   font-size: 1.8rem;
+  overflow-wrap: anywhere;
+  cursor: pointer;
 }
 
 @media (min-width: 30rem) {

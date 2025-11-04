@@ -1,10 +1,14 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import styles from './index.module.css';
 import instagramIcon from '@/assets/icons/instagram.svg';
 import facebookIcon from '@/assets/icons/facebook.svg';
 import telegramIcon from '@/assets/icons/telegram.svg';
+import { getMessages, Locale } from '@/i18n';
 
-const Contacts = () => {
+const email = 'ani.open.fest@gmail.com';
+
+const Contacts = ({ locale }: { locale: Locale }) => {
   return (
     <div className={styles.contacts}>
       <div className={styles.icons}>
@@ -14,7 +18,15 @@ const Contacts = () => {
         </div>
         <img src={telegramIcon.src} alt="Telegram icon" />
       </div>
-      <div className={styles.email}>ani.open.fest@gmail.com</div>
+      <div
+        className={styles.email}
+        onClick={() => {
+          navigator.clipboard.writeText(email);
+          alert(getMessages(locale).emailCopied);
+        }}
+      >
+        {email}
+      </div>
     </div>
   );
 };

@@ -5,6 +5,8 @@ export default {
     title: 'Anitime',
     description: 'todo'
   },
+  buyTicketsLink: 'https://www.anumuseum.org.il/he/events/animation-films/',
+  emailCopied: 'האימייל הועתק',
   aboutFestival: {
     title: 'על הפסטיבל',
     content: (

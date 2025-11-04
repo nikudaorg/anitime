@@ -3,46 +3,6 @@
   color: var(--color-text-on-dark);
 }
 
-/* .information h2 {
-  font-size: 3.75rem;
-  margin: 2.52rem 0;
-  margin-top: 4.125rem;
-} */
-
-/* .information p {
-  font-size: 1.875rem;
-  line-height: 1.5em;
-} */
-
-.information h2 {
-  font-size: 1.5625rem;
-  margin: 2.52rem 0;
-  margin-top: 4.125rem;
-}
-
-.information p,
-.information ul {
-  font-size: 1.25rem;
-  line-height: 1.5em;
-}
-
-@media (min-width: 48rem) {
-  .information h2 {
-    font-size: 5rem;
-    margin: 3.36rem 0;
-    margin-top: 5.5rem;
-  }
-
-  .information p,
-  .information ul {
-    font-size: 2.5rem;
-  }
-
-  /* .information p {
-    font-size: 1.66rem;
-  } */
-}
-
 .information section {
   display: flex;
   align-items: center;
@@ -57,30 +17,77 @@
   position: relative;
 }
 
-.center {
-  width: 80%;
+.information {
+  --base-font: 2.5rem;
+  --font: calc(var(--base-font) * 0.48);
+  --width: 95%;
+  --end-padding: 6rem;
 }
 
 .information section:last-of-type {
-  padding-bottom: 6rem;
+  padding-bottom:var(--end-padding);
 }
 
+.information h2 {
+  font-size: calc(var(--font) * 2);
+  margin: calc(var(--font) * 1.2) 0;
+  margin-top: calc(var(--font) * 2.4)
+}
 
-@media (min-width: 64rem) {
-  .center {
-    width: 60vw; /*54rem / 90rem * 100vw*/
-  }
-  .information section:last-of-type {
-    padding-bottom: 5rem;
+.information p,
+.information ul {
+  font-size: var(--font);
+  line-height: 1.5em;
+}
+
+.information li {
+  margin-bottom: calc(var(--font) * 1)
+}
+
+.center {
+  width: var(--width);
+}
+
+@media (min-width: 20rem) {
+  .information {
+    --interpolate: calc((100vw - 20rem) / 28rem);
+    --font: calc(var(--base-font) * (0.4628571429 + 0.4371428571 * var(--interpolate)));
+    --width: calc(18rem + 17rem * var(--interpolate));
   }
 }
 
-@media (min-width: 90rem) {
-  .center {
-    width: 54rem;
+/* @media (min-width: 34rem) {
+
+  .information {
+    --font: calc(var(--base-font) * 0.8);
+    --width: 30rem;
+  }
+} */
+
+@media (min-width: 48rem) {
+
+  .information {
+    --font: calc(var(--base-font) * 0.9);
+    --width: 40rem;
   }
 }
 
 .sponsors h2 {
   margin-bottom: 0.5em;
+}
+
+@media (min-width: 64rem) {
+  .information {
+    --interpolate: calc((100vw - 64rem) / 26rem);
+    --font: calc(var(--base-font) * (1 + 0.2 * var(--interpolate)));
+    --width: calc(45rem + 9rem * var(--interpolate));
+    --end-padding: 5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .information {
+    --font: calc(var(--base-font) * 1.2);
+    --width: 54rem;
+  }
 }

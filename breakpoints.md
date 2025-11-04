@@ -1,0 +1,6 @@
+- xxs - w \< 20rem
+- xs - 20rem \< w \< 34rem
+- s - 34rem \< w \< 48rem
+- m - 48rem \< w \< 64rem
+- l -64rem \< w \< 90rem
+- xl - 90rem \< w
