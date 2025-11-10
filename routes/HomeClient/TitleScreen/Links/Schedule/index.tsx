@@ -23,7 +23,16 @@ const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
       {/* stays fixed, not zoomed */}
 
       {/* only this container zooms */}
-      <div style={{ position: 'fixed', width: '100vw', height: '100vh', inset: '0', zIndex: 10 }}>
+      <div
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh',
+          inset: '0',
+          zIndex: 10,
+          direction: 'ltr',
+        }}
+      >
         <TransformWrapper
           initialScale={1}
           minScale={1}
