@@ -24,4 +24,4 @@ const nextConfig: NextConfig = {
   output: 'export',
 };
 
-export default withExportImages(nextConfig);
+export default nextConfig;

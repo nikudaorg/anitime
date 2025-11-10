@@ -3,17 +3,14 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './index.module.css';
 import { getMessages, Locale } from '@/i18n';
+import Schedule from './Schedule';
 
-const useLinks = (locale: Locale) => {
+const useLinks = (locale: Locale, onShowScheduleClick: () => void) => {
   const messages = getMessages(locale);
   return (
     <div className={styles.root}>
       <div className={styles.firstLine}>
-        <a
-          href="https://filmfreeway.com/anitime"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://filmfreeway.com/anitime" target="_blank" rel="noopener noreferrer">
           {messages.menu.submitYourFilm}
         </a>
         <a
@@ -28,6 +25,11 @@ const useLinks = (locale: Locale) => {
 
       <div className={styles.secondLine}>
         {/* <a>{messages.menu.films}</a> */}
+        {locale === 'ru' ? (
+          <a href="#" onClick={onShowScheduleClick}>
+            {messages.menu.schedule}
+          </a>
+        ) : null}
         <a href="#anitimeAbout">{messages.menu.aboutFestival}</a>
         {/* <a>{messages.menu.marketParticipants}</a> */}
         {/* <a>{messages.menu.team}</a> */}
@@ -43,7 +45,7 @@ const useLinks = (locale: Locale) => {
  */
 const Links = ({
   listenScroll,
-  locale
+  locale,
 }: {
   listenScroll: (cb: () => void) => () => void;
   locale: Locale;
@@ -75,14 +77,17 @@ const Links = ({
       cancelAnimationFrame(id);
     };
   }, [listenScroll, onScroll]);
-
+  const [isScheduleShown, setIsScheduleShown] = useState<boolean>(false);
   return (
     <>
       <div className={`${styles.visible}${isFixed ? ` ${styles.fixed}` : ''}`}>
-        {useLinks(locale)}
+        {useLinks(locale, () => setIsScheduleShown(true))}
       </div>
       <div className={styles.plug} ref={plugRef}>
-        {useLinks(locale)}
+        {useLinks(locale, () => {})}
+      </div>
+      <div style={{ display: 'contents', visibility: isScheduleShown ? 'visible' : 'hidden' }}>
+        <Schedule onClose={() => setIsScheduleShown(false)} locale={locale} />
       </div>
     </>
   );

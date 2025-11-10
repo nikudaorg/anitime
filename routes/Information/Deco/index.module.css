@@ -41,6 +41,7 @@
     scale(var(--scaleX), var(--scaleY));
 
   position: absolute;
+  z-index: 2;
 }
 
 .decoration:hover {

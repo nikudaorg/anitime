@@ -1,0 +1,52 @@
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 11;
+  height: 90vh;
+  max-width: 90vw;
+  cursor: grab;
+}
+
+.center:active {
+  cursor: grabbing;
+}
+
+@media (min-width: 48rem) {
+  .center {
+    max-width: 90vw;
+    height: 90vh;
+  }
+}
+
+.closeIcon {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  color: rgba(255, 255, 255, 1); /* half-transparent */
+  cursor: pointer;
+
+  /* optional but improves usability */
+  transition: opacity 0.2s ease;
+  z-index: 12;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.closeIcon:hover {
+  opacity: 0.8; /* simple feedback */
+}

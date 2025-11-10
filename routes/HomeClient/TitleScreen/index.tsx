@@ -8,7 +8,7 @@ import { Locale } from '@/i18n';
 
 const TitleScreen = ({
   listenScroll,
-  locale
+  locale,
 }: {
   listenScroll: (cb: () => void) => () => void;
   locale: Locale;
@@ -21,8 +21,7 @@ const TitleScreen = ({
     const linksHeight = linksRef.current!.getBoundingClientRect().height;
     if (
       window.innerHeight / linksHeight > 2.5 &&
-      window.innerWidth >
-        parseFloat(getComputedStyle(document.documentElement).fontSize) * 30
+      window.innerWidth > parseFloat(getComputedStyle(document.documentElement).fontSize) * 30
     ) {
       return '100vh';
     } else {

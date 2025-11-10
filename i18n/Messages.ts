@@ -26,6 +26,7 @@ export type Messages = {
     team: string;
     ourSponsors: string;
     contacts: string;
+    schedule: string;
   };
   banner: {
     time: string;
