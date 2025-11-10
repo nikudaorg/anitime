@@ -25,11 +25,9 @@ const useLinks = (locale: Locale, onShowScheduleClick: () => void) => {
 
       <div className={styles.secondLine}>
         {/* <a>{messages.menu.films}</a> */}
-        {locale === 'ru' ? (
-          <a href="#" onClick={onShowScheduleClick}>
-            {messages.menu.schedule}
-          </a>
-        ) : null}
+        <a href="#" onClick={onShowScheduleClick}>
+          {messages.menu.schedule}
+        </a>
         <a href="#anitimeAbout">{messages.menu.aboutFestival}</a>
         {/* <a>{messages.menu.marketParticipants}</a> */}
         {/* <a>{messages.menu.team}</a> */}
