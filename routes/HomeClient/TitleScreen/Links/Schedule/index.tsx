@@ -17,6 +17,10 @@ interface ScheduleProps {
 const scheduleRuPdf = './schedule-ru.pdf';
 const scheduleHePdf = './schedule-he.pdf';
 
+function isIOSWebKit() {
+  return /AppleWebKit/.test(navigator.userAgent) && /Mobile\/\w+/.test(navigator.userAgent);
+}
+
 const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
   const schedule = locale === 'ru' ? scheduleRu : scheduleHe;
   const schedulePdf = locale === 'ru' ? scheduleRuPdf : scheduleHePdf;
@@ -24,7 +28,7 @@ const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
     <>
       {/* stays fixed, not zoomed */}
       <X className={styles.closeIcon} onClick={onClose} />
-      <a href={schedulePdf} download>
+      <a href={schedulePdf} download={!isIOSWebKit()}>
         <Download className={styles.downloadIcon} />
       </a>
 
