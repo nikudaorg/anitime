@@ -29,7 +29,9 @@ type Props = {
   // originY?: number;
 
   zIndex?: number;
-  loc: Locale;
+  loc?: Locale;
+  heShiftLeft?: number;
+  heShiftTop?: number;
 } & PropsOptions<['t21' | 't22' | 't23' | 't24' | 't25']> &
   SizeProps;
 
@@ -38,7 +40,7 @@ const srcMapping = {
   '22': decor22,
   '23': decor23,
   '24': decor24,
-  '25': decor25
+  '25': decor25,
 } as const;
 
 const aspectRatios = {
@@ -46,7 +48,7 @@ const aspectRatios = {
   '22': '400 / 386',
   '23': '408 / 500',
   '24': '404 / 600',
-  '25': '400 / 480'
+  '25': '400 / 480',
 } as const;
 
 type DecoName = keyof typeof srcMapping;
@@ -59,9 +61,9 @@ const Deco = (props: Props) => {
   const imgSrc = srcMapping[type].src;
   let left = parseFloat(props.x.slice(0, -1)) / 100;
   let top = props.y;
-  const rtl = props.loc === "he";
-  if (rtl) left = 0.75 - left;
-  if (rtl) top = `${parseFloat(top.slice(0, -1)) * 1.03}%`;
+  const rtl = props.loc === 'he';
+  if (rtl) left = (props.heShiftLeft ?? 0.75) - left;
+  if (rtl) top = `${parseFloat(top.slice(0, -1)) * (props.heShiftTop ?? 1.03)}%`;
   const flip = props.flip ? !rtl : rtl;
   // const rot = rtl ? `${0 - parseInt(props.rot?.slice(0, -3) || "0")}deg` : props.rot;
   return (
@@ -72,7 +74,7 @@ const Deco = (props: Props) => {
         src={imgSrc}
         style={{
           width: `calc(${parseFloat(props.width.slice(0, -1)) / 100} * var(--width))`,
-          ["--start" as string]: `${rtl ? "-" : 0}${props.rot}` || "0deg",
+          ['--start' as string]: `${rtl ? '-' : 0}${props.rot}` || '0deg',
           top,
           left: `calc(${left} * var(--width))`,
           // ...(props.originX !== 0
@@ -81,7 +83,7 @@ const Deco = (props: Props) => {
           // ...(props.originY !== 0
           //   ? { '--y': `${-(props.originY || 50)}%` }
           //   : {}),
-          ...(flip ? { "--scaleX": "-1", "--scaleY": "1" } : {}),
+          ...(flip ? { '--scaleX': '-1', '--scaleY': '1' } : {}),
           aspectRatio: aspectRatios[type],
           zIndex: props.zIndex ?? 3,
         }}

@@ -176,3 +176,10 @@
 .visible.fixed .root {
   padding: 0;
 }
+
+.globe {
+  color: var(--color-text-on-light);
+  /* stroke: var(--color-accent); */
+  stroke-width: 0.07rem;
+  transform: scale(1.5);
+}

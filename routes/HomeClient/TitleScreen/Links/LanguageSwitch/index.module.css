@@ -1,0 +1,56 @@
+.closeIcon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  color: rgba(255, 255, 255, 1); /* half-transparent */
+  cursor: pointer;
+
+  /* optional but improves usability */
+  transition: opacity 0.2s ease;
+  z-index: 12;
+}
+
+.closeIcon:hover {
+  opacity: 0.8; /* simple feedback */
+}
+
+.root {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  gap: 1rem;
+
+  font-size: 4rem;
+
+  --width: 100vw;
+
+  text-align: center;
+}
+
+.root a {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+
+  border-bottom: solid 2px;
+  box-shadow: 0.4rem 0.4rem;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+.root a:hover {
+  top: 0;
+  box-shadow: unset;
+  transform: unset;
+}

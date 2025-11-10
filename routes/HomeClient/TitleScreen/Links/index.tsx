@@ -4,8 +4,14 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './index.module.css';
 import { getMessages, Locale } from '@/i18n';
 import Schedule from './Schedule';
+import { Globe } from 'lucide-react';
+import LanguageSwitch from './LanguageSwitch';
 
-const useLinks = (locale: Locale, onShowScheduleClick: () => void) => {
+const useLinks = (
+  locale: Locale,
+  onShowScheduleClick: () => void,
+  onChangeLanguageClick: () => void
+) => {
   const messages = getMessages(locale);
   return (
     <div className={styles.root}>
@@ -25,6 +31,9 @@ const useLinks = (locale: Locale, onShowScheduleClick: () => void) => {
 
       <div className={styles.secondLine}>
         {/* <a>{messages.menu.films}</a> */}
+        <a href="#" onClick={onChangeLanguageClick}>
+          <Globe className={styles.globe} />
+        </a>
         <a href="#" onClick={onShowScheduleClick}>
           {messages.menu.schedule}
         </a>
@@ -76,17 +85,29 @@ const Links = ({
     };
   }, [listenScroll, onScroll]);
   const [isScheduleShown, setIsScheduleShown] = useState<boolean>(false);
+  const [isLanguageSwitchShown, setIsLanguageSwitchShown] = useState<boolean>(false);
   return (
     <>
       <div className={`${styles.visible}${isFixed ? ` ${styles.fixed}` : ''}`}>
-        {useLinks(locale, () => setIsScheduleShown(true))}
+        {useLinks(
+          locale,
+          () => setIsScheduleShown(true),
+          () => setIsLanguageSwitchShown(true)
+        )}
       </div>
       <div className={styles.plug} ref={plugRef}>
-        {useLinks(locale, () => {})}
+        {useLinks(
+          locale,
+          () => {},
+          () => {}
+        )}
       </div>
       <div style={{ display: 'contents', visibility: isScheduleShown ? 'visible' : 'hidden' }}>
         <Schedule onClose={() => setIsScheduleShown(false)} locale={locale} />
       </div>
+      {isLanguageSwitchShown ? (
+        <LanguageSwitch locale={locale} onClose={() => setIsLanguageSwitchShown(false)} url="" />
+      ) : null}
     </>
   );
 };
