@@ -5,7 +5,7 @@ import { Locale } from '@/i18n';
 import styles from './index.module.css';
 import scheduleRu from './schedule-ru.webp';
 import scheduleHe from './schedule-he.webp';
-import { X } from 'lucide-react';
+import { Download, X } from 'lucide-react';
 import Image from 'next/image';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
@@ -14,12 +14,19 @@ interface ScheduleProps {
   onClose: () => void;
 }
 
+const scheduleRuPdf = './schedule-ru.pdf';
+const scheduleHePdf = './schedule-he.pdf';
+
 const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
   const schedule = locale === 'ru' ? scheduleRu : scheduleHe;
+  const schedulePdf = locale === 'ru' ? scheduleRuPdf : scheduleHePdf;
   return (
     <>
       {/* stays fixed, not zoomed */}
       <X className={styles.closeIcon} onClick={onClose} />
+      <a href={schedulePdf} download>
+        <Download className={styles.downloadIcon} />
+      </a>
 
       {/* stays fixed, not zoomed */}
 
