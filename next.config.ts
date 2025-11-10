@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import pages from './pages';
+import withExportImages from 'next-export-optimize-images';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
   //     destination: `/default${page}`
   //   }));
   // },
-  output: 'export'
+  output: 'export',
 };
 
-export default nextConfig;
+export default withExportImages(nextConfig);
