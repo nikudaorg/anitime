@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./index.module.css";
-import instagramIcon from "@/assets/icons/instagram.svg";
-import facebookIcon from "@/assets/icons/facebook.svg";
-import telegramIcon from "@/assets/icons/telegram.svg";
+import instagramIcon from './icons/instagram.svg';
+import facebookIcon from './icons/facebook.svg';
+import telegramIcon from './icons/telegram.svg';
 import { getMessages, Locale } from "@/i18n";
 import CopyText from "../CopyText";
 import SoonLink from "../SoonLink";

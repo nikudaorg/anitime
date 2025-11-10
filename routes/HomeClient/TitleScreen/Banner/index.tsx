@@ -1,6 +1,6 @@
-import banner2560x978 from '@/assets/banner/2560x978.webp';
-import banner1560x1074 from '@/assets/banner/1560x1074.webp';
-import banner640x600 from '@/assets/banner/640x600.webp';
+import banner2560x978 from './banner/2560x978.webp';
+import banner1560x1074 from './banner/1560x1074.webp';
+import banner640x600 from './banner/640x600.webp';
 import styles from './index.module.css';
 import { getMessages, Locale } from '@/i18n';
 
