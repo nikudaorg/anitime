@@ -15,6 +15,7 @@ interface ScheduleProps {
 }
 
 const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
+  const schedule = locale === 'ru' ? scheduleRu : scheduleHe;
   return (
     <>
       {/* stays fixed, not zoomed */}
@@ -54,8 +55,8 @@ const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
               <div
                 style={{
                   //   ['--aspect-ratio' as string]: scheduleRu.width / scheduleRu.height,
-                  height: `min(100vh, calc(${scheduleRu.height / scheduleRu.width} * 100vw))`,
-                  width: `min(100vw, calc(${scheduleRu.width / scheduleRu.height} * 100vh))`,
+                  height: `min(100vh, calc(${schedule.height / schedule.width} * 100vw))`,
+                  width: `min(100vw, calc(${schedule.width / schedule.height} * 100vh))`,
                   position: 'relative',
                   left: '50%',
                   top: '50%',
@@ -64,13 +65,7 @@ const Schedule: FunctionComponent<ScheduleProps> = ({ locale, onClose }) => {
                 }}
                 className={styles.wrapper}
               >
-                <Image
-                  alt="schedule"
-                  src={locale === 'ru' ? scheduleRu.src : scheduleHe.src}
-                  fill
-                  draggable={false}
-                  unoptimized
-                />
+                <Image alt="schedule" src={schedule.src} fill draggable={false} unoptimized />
               </div>
             </TransformComponent>
           )}
