@@ -5,33 +5,24 @@ import decor23 from '@/assets/decorations/23.webp';
 import decor24 from '@/assets/decorations/24.webp';
 import decor25 from '@/assets/decorations/25.webp';
 import { PropsOptions } from '../../PropsOptions';
-import ScreenSize, { SizeProps, sizes } from '../../ScreenSize/';
+import ScreenSize, { SizeProps, sizes } from '../../ScreenSize';
 
 import styles from './index.module.css';
-import { Locale } from '@/i18n';
-// type Sign = '-' | '';
+import { ReactNode } from 'react';
 
 type Props = {
   rot?: `${number}deg`;
-  /** Width in the percents of var(--width) */
+  /** Width in the percents of container's width */
   width: `${number}%`;
   flip?: boolean;
 
-  /** y in percents of container */
+  /** y in percents of container's height */
   y: `${number}%`;
 
-  /** x in percents of var(--width)*/
+  /** x in percents of container's width */
   x: `${number}%`;
 
-  // /** X Origin of decoration in percents */
-  // originX?: number;
-  // /** Y Origin of decoration in percents */
-  // originY?: number;
-
   zIndex?: number;
-  loc?: Locale;
-  heShiftLeft?: number;
-  heShiftTop?: number;
 } & PropsOptions<['t21' | 't22' | 't23' | 't24' | 't25']> &
   SizeProps;
 
@@ -53,43 +44,49 @@ const aspectRatios = {
 
 type DecoName = keyof typeof srcMapping;
 
-const Deco = (props: Props) => {
-  const type = Object.keys(srcMapping).find(
-    (e) => props[`t${e as DecoName}`] as boolean
-  ) as DecoName;
-
-  const imgSrc = srcMapping[type].src;
-  let left = parseFloat(props.x.slice(0, -1)) / 100;
-  let top = props.y;
-  const rtl = props.loc === 'he';
-  if (rtl) left = (props.heShiftLeft ?? 0.75) - left;
-  if (rtl) top = `${parseFloat(top.slice(0, -1)) * (props.heShiftTop ?? 1.03)}%`;
-  const flip = props.flip ? !rtl : rtl;
-  // const rot = rtl ? `${0 - parseInt(props.rot?.slice(0, -3) || "0")}deg` : props.rot;
-  return (
-    <ScreenSize {...Object.fromEntries(sizes.map((s) => [s, props[s]]))}>
-      <img
-        alt=""
-        className={`${[styles.decoration]}`}
-        src={imgSrc}
-        style={{
-          width: `calc(${parseFloat(props.width.slice(0, -1)) / 100} * var(--width))`,
-          ['--start' as string]: `${rtl ? '-' : 0}${props.rot}` || '0deg',
-          top,
-          left: `calc(${left} * var(--width))`,
-          // ...(props.originX !== 0
-          //   ? { '--x': `${-(props.originX || 50)}%` }
-          //   : {}),
-          // ...(props.originY !== 0
-          //   ? { '--y': `${-(props.originY || 50)}%` }
-          //   : {}),
-          ...(flip ? { '--scaleX': '-1', '--scaleY': '1' } : {}),
-          aspectRatio: aspectRatios[type],
-          zIndex: props.zIndex ?? 3,
-        }}
-      />
-    </ScreenSize>
-  );
+const withName = <Props,>(name: string, Component: (props: Props) => ReactNode) => {
+  (Component as never as { displayName: string }).displayName = name;
+  return Component;
 };
+/**
+ *
+ * Always add to a container with container-type: inline-size and position: relative;
+ *
+ * @param rtl
+ * @returns
+ */
+const createDeco = (rtl: boolean) => {
+  return withName(`getDeco(${rtl})`, (props: Props) => {
+    const type = Object.keys(srcMapping).find(
+      (e) => props[`t${e as DecoName}`] as boolean
+    ) as DecoName;
 
-export default Deco;
+    const imgSrc = srcMapping[type].src;
+
+    const flip = props.flip ? !rtl : rtl;
+    return (
+      <ScreenSize {...Object.fromEntries(sizes.map((s) => [s, props[s]]))}>
+        <img
+          alt=""
+          className={`${[styles.decoration]}`}
+          src={imgSrc}
+          style={{
+            width: `${props.width.slice(0, -1)}cqw`,
+            ['--rotate-start' as string]: `${rtl ? '-' : 0}${props.rot}` || '0deg',
+            top: rtl ? `${parseFloat(props.y.slice(0, -1)) * 1.03}%` : props.y,
+            [rtl ? 'right' : 'left']: `${props.x.slice(0, -1)}cqw`,
+            ...(flip ? { '--scaleX': '-1', '--scaleY': '1' } : {}),
+            aspectRatio: aspectRatios[type],
+            zIndex: props.zIndex ?? 3,
+            ['--x' as string]: rtl ? '50%' : '-50%',
+            ['--y' as string]: '-50%',
+          }}
+        />
+      </ScreenSize>
+    );
+  });
+};
+export const decos = {
+  ltr: createDeco(false),
+  rtl: createDeco(true),
+};

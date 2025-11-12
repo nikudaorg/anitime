@@ -11,10 +11,11 @@
 
 .information section,
 .information h2,
-.information div,
+.information div.center,
 .information p,
 .information ul {
   position: relative;
+  container-type: inline-size;
 }
 
 .information {

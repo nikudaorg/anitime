@@ -27,23 +27,28 @@
 .decoration {
   /* animation: spin 60s infinite linear;
   animation-play-state: paused; */
-  transition: transform 0.4s, top 0.4s, left 0.4s;
+  transition: transform 0.4s;
   transform-origin: center center;
 
-  --rotate: var(--start);
-
+  --rotate: var(--rotate-start);
+  
   --x: 0px;
   --y: 0px;
   --scaleX: 1;
   --scaleY: 1;
+  --scaleXRes: var(--scaleX);
+  --scaleYRes: var(--scaleY);
 
   transform: translate(var(--x), var(--y)) rotate(var(--rotate))
-    scale(var(--scaleX), var(--scaleY));
+    scale(var(--scaleXRes), var(--scaleYRes));
 
   position: absolute;
   z-index: 2;
+  user-select: none;
 }
 
 .decoration:hover {
-  --rotate: calc(var(--start) - 10deg);
+  --scaleXRes: calc(0.95 * var(--scaleX));
+  --scaleYRes: calc(0.95 * var(--scaleY));
+  --rotate: calc(var(--rotate-start) - 10deg);
 }
