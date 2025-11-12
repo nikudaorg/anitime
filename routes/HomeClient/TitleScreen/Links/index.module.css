@@ -183,3 +183,9 @@
   stroke-width: 0.07rem;
   transform: scale(1.5);
 }
+
+.globeLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
