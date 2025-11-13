@@ -3,8 +3,9 @@ import ProgramLongDecos from '../decorations/program/Long';
 
 export default {
   seo: {
-    title: 'Anitime',
-    description: 'todo',
+    title: 'Anitime — новый фестиваль анимации в Тель-Авиве',
+    description:
+      'ANITIME — новый фестиваль анимации в Тель-Авиве, создан командой молодых волонтёров как пространство, где анимация становится мостом между культурами и людьми.',
   },
   buyTicketsLink: 'https://www.anumuseum.org.il/ru/events/animation-films/',
   emailCopied: 'Email скопирован',
@@ -156,8 +157,9 @@ export default {
   },
   movies: {
     seo: {
-      title: 'Anitime - Фильмы',
-      description: 'todo',
+      title: 'Anitime — Фильмы',
+      description:
+        'ANITIME — новый фестиваль анимации в Тель-Авиве, создан командой молодых волонтёров как пространство, где анимация становится мостом между культурами и людьми.',
     },
   },
 } as const;

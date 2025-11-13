@@ -3,8 +3,9 @@ import ProgramShortDecos from '../decorations/program/Short';
 
 export default {
   seo: {
-    title: 'Anitime',
-    description: 'todo',
+    title: 'Anitime – פסטיבל אנימציה חדש בתל אביב',
+    description:
+      'ANITIME הוא פסטיבל אנימציה חדש בתל אביב, שנוצר על ידי צוות צעיר של מתנדבים מתוך רצון לבנות מרחב שבו האנימציה הופכת לגשר בין תרבויות ואנשים.',
   },
   buyTicketsLink: 'https://www.anumuseum.org.il/he/events/animation-films/',
   emailCopied: 'האימייל הועתק',
@@ -59,8 +60,9 @@ export default {
   },
   movies: {
     seo: {
-      title: 'Anitime - סרטים',
-      description: 'todo',
+      title: 'Anitime – סרטים',
+      description:
+        'ANITIME הוא פסטיבל אנימציה חדש בתל אביב, שנוצר על ידי צוות צעיר של מתנדבים מתוך רצון לבנות מרחב שבו האנימציה הופכת לגשר בין תרבויות ואנשים.',
     },
   },
 } as const;

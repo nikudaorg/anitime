@@ -3,8 +3,9 @@ import ProgramShortDecos from '../decorations/program/Short';
 
 export default {
   seo: {
-    title: 'Anitime',
-    description: 'todo',
+    title: 'Anitime – A New Animation Festival in Tel Aviv',
+    description:
+      'ANITIME is a new animation festival in Tel Aviv created by a team of young volunteers united by the idea of building a space where animation becomes a bridge between cultures and people.',
   },
   buyTicketsLink: 'https://www.anumuseum.org.il/he/events/animation-films/',
   emailCopied: 'The email is copied',
@@ -72,8 +73,9 @@ export default {
   },
   movies: {
     seo: {
-      title: 'Anitime - Movies',
-      description: 'todo',
+      title: 'Anitime – Movies',
+      description:
+        'ANITIME is a new animation festival in Tel Aviv created by a team of young volunteers united by the idea of building a space where animation becomes a bridge between cultures and people.',
     },
   },
 } as const;
