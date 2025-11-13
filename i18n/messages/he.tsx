@@ -1,4 +1,5 @@
-import { Messages } from '../Messages';
+import AboutFestivalDecos from '../decorations/aboutFestival';
+import ProgramShortDecos from '../decorations/program/Short';
 
 export default {
   seo: {
@@ -10,27 +11,33 @@ export default {
   aboutFestival: {
     title: 'על הפסטיבל',
     content: (
-      <p>
-        <strong>ANITIME הוא פסטיבל אנימציה חדש בתל אביב,</strong>
-        <br />
-        שנוצר על ידי צוות צעיר של מתנדבים, מתוך רצון לבנות מרחב שבו האנימציה הופכת לגשר בין תרבויות
-        ואנשים.
-        <br />
-        <br />
-        נשמח לראותכם ב <strong>מוזיאון העם היהודי ANU ב-20 בנובמבר בשעה 17:00</strong>
-      </p>
+      <>
+        <p>
+          <strong>ANITIME הוא פסטיבל אנימציה חדש בתל אביב,</strong>
+          <br />
+          שנוצר על ידי צוות צעיר של מתנדבים, מתוך רצון לבנות מרחב שבו האנימציה הופכת לגשר בין
+          תרבויות ואנשים.
+          <br />
+          <br />
+          נשמח לראותכם ב <strong>מוזיאון העם היהודי ANU ב-20 בנובמבר בשעה 17:00</strong>
+        </p>
+        <AboutFestivalDecos rtl />
+      </>
     ),
   },
   inProgram: {
     title: 'בתכנית',
     content: (
-      <ul>
-        <li>תחרות סרטים ישראליים ובינלאומיים (מפרויקטים של סטודנטים ועד עבודות אולפן)</li>
-        <li>מפגשים עם במאים</li>
-        <li>סדנאות לילדים ולמבוגרים</li>
-        <li>הרצאות של אנימטורים מובילים</li>
-        <li>שוק שהוכן על ידי משתתפי פרויקט The Walks</li>
-      </ul>
+      <>
+        <ul>
+          <li>תחרות סרטים ישראליים ובינלאומיים (מפרויקטים של סטודנטים ועד עבודות אולפן)</li>
+          <li>מפגשים עם במאים</li>
+          <li>סדנאות לילדים ולמבוגרים</li>
+          <li>הרצאות של אנימטורים מובילים</li>
+          <li>שוק שהוכן על ידי משתתפי פרויקט The Walks</li>
+        </ul>
+        <ProgramShortDecos rtl />
+      </>
     ),
   },
   ourSponsorsTitle: 'השותפים שלנו',
@@ -56,4 +63,4 @@ export default {
       description: 'todo',
     },
   },
-} satisfies Messages;
+} as const;

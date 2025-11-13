@@ -1,4 +1,5 @@
-import type { Messages } from '../Messages';
+import AboutFestivalDecos from '../decorations/aboutFestival';
+import ProgramShortDecos from '../decorations/program/Short';
 
 export default {
   seo: {
@@ -10,39 +11,46 @@ export default {
   aboutFestival: {
     title: 'ABOUT FESTIVAL',
     content: (
-      <p>
-        <strong>ANITIME is a new animation festival in Tel Aviv,</strong>
-        <br />
-        created by a team of young volunteers united by the idea of building a space where animation
-        becomes a bridge between cultures and people.
-        <br />
-        <br />
-        The festival will take place at the{' '}
-        <strong>ANU Museum of the Jewish People on November 20th at 17:00</strong>
-      </p>
+      <>
+        <p>
+          <strong>ANITIME is a new animation festival in Tel Aviv,</strong>
+          <br />
+          created by a team of young volunteers united by the idea of building a space where
+          animation becomes a bridge between cultures and people.
+          <br />
+          <br />
+          The festival will take place at the{' '}
+          <strong>ANU Museum of the Jewish People on November 20th at 17:00</strong>
+        </p>
+        <AboutFestivalDecos />
+      </>
     ),
   },
   inProgram: {
     title: 'PROGRAM INCLUDES',
     content: (
-      <ul>
-        <li>
-          <strong>A competition of Israeli and international films</strong> (from student projects
-          to studio works)
-        </li>
-        <li>
-          <strong>Meetings</strong> with directors
-        </li>
-        <li>
-          <strong>Workshops</strong> for children and adults
-        </li>
-        <li>
-          <strong>Lectures</strong> by renowned animators
-        </li>
-        <li>
-          <strong>A market</strong> prepared by participants of <strong>The Walks</strong> project.
-        </li>
-      </ul>
+      <>
+        <ul>
+          <li>
+            <strong>A competition of Israeli and international films</strong> (from student projects
+            to studio works)
+          </li>
+          <li>
+            <strong>Meetings</strong> with directors
+          </li>
+          <li>
+            <strong>Workshops</strong> for children and adults
+          </li>
+          <li>
+            <strong>Lectures</strong> by renowned animators
+          </li>
+          <li>
+            <strong>A market</strong> prepared by participants of <strong>The Walks</strong>{' '}
+            project.
+          </li>
+        </ul>
+        <ProgramShortDecos />
+      </>
     ),
   },
   ourSponsorsTitle: 'OUR SPONSORS',
@@ -68,4 +76,4 @@ export default {
       description: 'todo',
     },
   },
-} satisfies Messages;
+} as const;

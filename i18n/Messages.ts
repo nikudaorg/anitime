@@ -1,41 +1,5 @@
-import { ReactNode } from 'react';
+import type en from './messages/en';
+import type ru from './messages/ru';
+import type he from './messages/he';
 
-export type Messages = {
-  seo: {
-    title: string;
-    description: string;
-  };
-  buyTicketsLink: string;
-  emailCopied: string;
-  aboutFestival: {
-    title: string;
-    content: ReactNode;
-  };
-  inProgram: {
-    title: string;
-    content: ReactNode;
-  };
-  ourSponsorsTitle: string;
-  contactsTitle: string;
-  menu: {
-    submitYourFilm: string;
-    buyTickets: string;
-    films: string;
-    aboutFestival: string;
-    marketParticipants: string;
-    team: string;
-    ourSponsors: string;
-    contacts: string;
-    schedule: string;
-  };
-  banner: {
-    time: string;
-    address: string;
-  };
-  movies: {
-    seo: {
-      title: string;
-      description: string;
-    };
-  };
-};
+export type Messages = typeof en | typeof ru | typeof he;

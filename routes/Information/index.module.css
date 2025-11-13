@@ -35,6 +35,12 @@
   margin-top: calc(var(--font) * 2.4)
 }
 
+.information h3 {
+  font-size: calc(var(--font) * 1.5);
+  margin: calc(var(--font) * 0.9) 0;
+  margin-top: calc(var(--font) * 1.8)
+}
+
 .information p,
 .information ul {
   font-size: var(--font);
@@ -91,4 +97,13 @@
     --font: calc(var(--base-font) * 1.2);
     --width: 54rem;
   }
+}
+
+.information a {
+  color: var(--color-accent);
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  transition: border-radius var(--animation-length);
 }
