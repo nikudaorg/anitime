@@ -70,26 +70,21 @@ export default {
 
         <h3>🎨 Аквагрим</h3>
         <p>
-          <em>
-            C{' '}
-            <a
-              href="https://www.facebook.com/diana.yanvareva.2025/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Дианой Январевой
-            </a>
-            .
-          </em>
+          C{' '}
+          <a
+            href="https://www.facebook.com/diana.yanvareva.2025/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Дианой Январевой
+          </a>
         </p>
         <p>Ваш ребёнок сможет за 5 минут превратиться в героя любимого мультфильма!</p>
-
-        <h3>🎞️ Мастер-классы</h3>
 
         <h3>📸 Мастер-класс «Фотография миниатюр: путь к максимальной правдоподобности»</h3>
         <p>
           <strong>
-            Ведёт:{' '}
+            Ведёт{' '}
             <a
               href="https://www.instagram.com/domile_studio?igsh=MTdyc2s3NDk4ejA2dw=="
               target="_blank"
@@ -109,7 +104,7 @@ export default {
 
         <h3>💫 Мастер-класс «Внутри моей головы»</h3>
         <p>
-          <strong>Ведут: Маша Коган-Лернер, Пётр Чижов</strong>
+          <strong>Ведут Маша Коган-Лернер и Пётр Чижов</strong>
         </p>
         <p>
           Мастер-класс по импровизационному театру и коллажу, где участники оказываются внутри
