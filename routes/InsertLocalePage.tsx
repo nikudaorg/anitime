@@ -5,11 +5,13 @@ import { useEffect } from 'react';
 
 const detectPreferredLocale = () => {
   const supported = ['en', 'ru', 'he'];
-  return (
-    navigator.languages
-      .find((l) => supported.includes(l.split('-')[0]))
-      ?.split('-')[0] || 'en'
-  );
+  try {
+    return (
+      navigator.languages.find((l) => supported.includes(l.split('-')[0]))?.split('-')[0] || 'en'
+    );
+  } catch {
+    return 'en';
+  }
 };
 
 export default function InsertLocalePage({ parts }: { parts: string[] }) {
