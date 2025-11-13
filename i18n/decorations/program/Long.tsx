@@ -22,7 +22,7 @@ const ProgramLongDecos: FunctionComponent<ProgramLongDecosProps> = ({ rtl }) => 
       <Deco l t25 x="112.2%" y="25.7%" rot="120deg" width="13%" />
       <Deco l t22 x="-17.6%" y="29.1%" rot="310deg" width="18%" flip /> {/* new */}
       <Deco l t24 x="108.9%" y="30.2%" rot="35deg" width="20%" /> {/* new */}
-      <Deco l t25 x="104.2%" y="33.3%" rot="85deg" width="23%" flip />
+      <Deco l t25 x="118.2%" y="35.3%" rot="85deg" width="23%" flip />
       <Deco l t21 x="-14.1%" y="36.9%" rot="275deg" width="22%" />
       <Deco l t23 x="112.7%" y="39.8%" rot="160deg" width="21%" flip /> {/* new */}
       <Deco l t24 x="-17.9%" y="41.8%" rot="30deg" width="15%" /> {/* new */}
@@ -36,7 +36,7 @@ const ProgramLongDecos: FunctionComponent<ProgramLongDecosProps> = ({ rtl }) => 
       <Deco l t21 x="108.3%" y="66.4%" rot="185deg" width="21%" />
       <Deco l t25 x="-19.1%" y="70.2%" rot="260deg" width="15%" flip /> {/* new */}
       <Deco l t22 x="104.8%" y="71.4%" rot="350deg" width="22%" /> {/* new */}
-      <Deco l t23 x="113.4%" y="73.1%" rot="95deg" width="29%" />
+      <Deco l t23 x="113.4%" y="75.1%" rot="95deg" width="29%" />
       <Deco l t24 x="-15.0%" y="77.6%" rot="180deg" width="20%" flip /> {/* new */}
       <Deco l t25 x="109.2%" y="79.0%" rot="45deg" width="16%" /> {/* new */}
       <Deco l t22 x="-17.8%" y="82.3%" rot="140deg" width="20%" flip />
