@@ -1,5 +1,6 @@
 import { Locale, Messages, getMessages } from '@/i18n';
 import locales from '@/locales';
+import { Metadata } from 'next';
 
 type SEO = {
   title: string;
@@ -8,7 +9,7 @@ type SEO = {
 
 export const metadataGen =
   (path: `/${string}`, getSEO: (messages: Messages) => SEO) =>
-  (myLocale: Locale) => {
+  (myLocale: Locale): Metadata => {
     const messages = getMessages(myLocale);
     const seo = getSEO(messages);
 
@@ -18,11 +19,8 @@ export const metadataGen =
       alternates: {
         canonical: `https://anitimefest.com/${myLocale}${path}`,
         languages: Object.fromEntries(
-          locales.map((locale) => [
-            locale,
-            `https://anitimefest.com/${locale}${path}`
-          ])
-        )
-      }
+          locales.map((locale) => [locale, `https://anitimefest.com/${locale}${path}`])
+        ),
+      },
     };
   };
