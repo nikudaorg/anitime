@@ -14,6 +14,8 @@ const AnitimeBanner = ({ locale }: { locale: Locale }) => {
         <source media="(min-width: 48rem)" srcSet={banner1560x1074.src} />
         <img src={banner640x600.src} alt="Hero banner" />
       </picture>
+      <h1>{messages.title}</h1>
+      <div className={styles.titleShadow}>{messages.title}</div>
       <div className={styles.date}>{messages.banner.time}</div>
       <div
         className={styles.address}

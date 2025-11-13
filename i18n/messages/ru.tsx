@@ -7,6 +7,7 @@ export default {
     description:
       'ANITIME — новый фестиваль анимации в Тель-Авиве, создан командой молодых волонтёров как пространство, где анимация становится мостом между культурами и людьми.',
   },
+  title: 'ANITIME',
   buyTicketsLink: 'https://www.anumuseum.org.il/ru/events/animation-films/',
   emailCopied: 'Email скопирован',
   aboutFestival: {

@@ -7,6 +7,7 @@ export default {
     description:
       'ANITIME הוא פסטיבל אנימציה חדש בתל אביב, שנוצר על ידי צוות צעיר של מתנדבים מתוך רצון לבנות מרחב שבו האנימציה הופכת לגשר בין תרבויות ואנשים.',
   },
+  title: 'ANITIME',
   buyTicketsLink: 'https://www.anumuseum.org.il/he/events/animation-films/',
   emailCopied: 'האימייל הועתק',
   aboutFestival: {

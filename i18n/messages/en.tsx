@@ -7,6 +7,7 @@ export default {
     description:
       'ANITIME is a new animation festival in Tel Aviv created by a team of young volunteers united by the idea of building a space where animation becomes a bridge between cultures and people.',
   },
+  title: 'ANITIME',
   buyTicketsLink: 'https://www.anumuseum.org.il/he/events/animation-films/',
   emailCopied: 'The email is copied',
   aboutFestival: {

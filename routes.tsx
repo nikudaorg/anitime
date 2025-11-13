@@ -23,6 +23,22 @@ export type Routes = [
   }
 ][];
 
+import { Amatic_SC } from 'next/font/google';
+import './globals.css';
+
+const amaticSC = Amatic_SC({
+  weight: ['400', '700'],
+  subsets: ['latin', 'cyrillic', 'hebrew'],
+});
+
+function Layout({ children, locale }: { children: ReactNode; locale: Locale }) {
+  return (
+    <html lang={locale}>
+      <body className={`${amaticSC.className} antialiased`}>{children}</body>
+    </html>
+  );
+}
+
 const getSiteRoutes = (locale?: Locale): Routes => [
   [
     '/',
@@ -34,26 +50,30 @@ const getSiteRoutes = (locale?: Locale): Routes => [
             page: {
               Component: () =>
                 locale ? (
-                  <MoviesPage locale={locale} />
+                  <Layout locale={locale}>
+                    <MoviesPage locale={locale} />
+                  </Layout>
                 ) : (
                   <InsertLocalePage parts={['movies']} />
                 ),
-              metadata: generateMoviesMetadata(locale || 'en')
-            }
-          }
-        ]
+              metadata: generateMoviesMetadata(locale || 'en'),
+            },
+          },
+        ],
       ],
       page: {
         Component: () =>
           locale ? (
-            <HomePage locale={locale} />
+            <Layout locale={locale}>
+              <HomePage locale={locale} />
+            </Layout>
           ) : (
             <InsertLocalePage parts={[]} />
           ),
-        metadata: generateHomeMetadata(locale || 'en')
-      }
-    }
-  ]
+        metadata: generateHomeMetadata(locale || 'en'),
+      },
+    },
+  ],
 ];
 
 const routes: Routes = [

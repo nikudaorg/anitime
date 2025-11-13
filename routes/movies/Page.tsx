@@ -1,10 +1,7 @@
 import { getMessages, Locale } from '@/i18n';
 import { metadataGen } from '../generateMetadata';
 
-export const generateMetadata = metadataGen(
-  '/movies',
-  (messages) => messages.movies.seo
-);
+export const generateMetadata = metadataGen('movies', (messages) => messages.movies.seo);
 
 export const dynamic = 'force-static';
 export const revalidate = false;
