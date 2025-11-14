@@ -14,15 +14,13 @@ const detectPreferredLocale = () => {
   }
 };
 
-export default function InsertLocalePage({ parts }: { parts: string[] }) {
+export default function InsertLocalePage({ path }: { path: `${string}/` }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   useEffect(() => {
     const query = searchParams.toString();
 
-    router.replace(
-      `${detectPreferredLocale()}/${parts.join('/')}${query ? `?${query}` : ''}`
-    );
-  }, [searchParams, router, parts]);
+    router.replace(`/${detectPreferredLocale()}${path.slice(0, -1)}${query ? `?${query}` : ''}`);
+  }, [searchParams, router, path]);
   return null;
 }

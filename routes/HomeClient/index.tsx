@@ -9,10 +9,12 @@ import { ReactNode, useRef } from 'react';
 
 export default function HomeClient({
   information,
-  locale
+  locale,
+  baseUrl,
 }: {
   information: ReactNode;
   locale: Locale;
+  baseUrl: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   return (
@@ -31,6 +33,7 @@ export default function HomeClient({
           };
         }}
         locale={locale}
+        baseUrl={baseUrl}
       />
       {information}
     </div>

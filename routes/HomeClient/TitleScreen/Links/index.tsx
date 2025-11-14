@@ -6,11 +6,13 @@ import { getMessages, Locale } from '@/i18n';
 import Schedule from './Schedule';
 import { Globe } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
+import Link from 'next/link';
 
 const useLinks = (
   locale: Locale,
   onShowScheduleClick: () => void,
-  onChangeLanguageClick: () => void
+  onChangeLanguageClick: () => void,
+  baseUrl: string
 ) => {
   const messages = getMessages(locale);
   return (
@@ -34,6 +36,7 @@ const useLinks = (
         <a href="#" onClick={onChangeLanguageClick} className={styles.globeLink}>
           <Globe className={styles.globe} />
         </a>
+        <Link href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</Link>
         <a href="#" onClick={onShowScheduleClick}>
           {messages.menu.schedule}
         </a>
@@ -53,9 +56,11 @@ const useLinks = (
 const Links = ({
   listenScroll,
   locale,
+  baseUrl,
 }: {
   listenScroll: (cb: () => void) => () => void;
   locale: Locale;
+  baseUrl: string;
 }) => {
   const [isFixed, setIsFixed] = useState(false);
   const isFixedRef = useRef(false);
@@ -92,14 +97,16 @@ const Links = ({
         {useLinks(
           locale,
           () => setIsScheduleShown(true),
-          () => setIsLanguageSwitchShown(true)
+          () => setIsLanguageSwitchShown(true),
+          baseUrl
         )}
       </div>
       <div className={styles.plug} ref={plugRef}>
         {useLinks(
           locale,
           () => {},
-          () => {}
+          () => {},
+          baseUrl
         )}
       </div>
       <div style={{ display: 'contents', visibility: isScheduleShown ? 'visible' : 'hidden' }}>

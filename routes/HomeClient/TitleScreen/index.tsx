@@ -9,9 +9,11 @@ import { Locale } from '@/i18n';
 const TitleScreen = ({
   listenScroll,
   locale,
+  baseUrl,
 }: {
   listenScroll: (cb: () => void) => () => void;
   locale: Locale;
+  baseUrl: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
@@ -54,7 +56,7 @@ const TitleScreen = ({
         <Banner locale={locale} />
       </div>
       <div className={styles.links} ref={linksRef}>
-        <Links listenScroll={listenScroll} locale={locale} />
+        <Links listenScroll={listenScroll} locale={locale} baseUrl={baseUrl} />
       </div>
     </div>
   );

@@ -1,43 +1,30 @@
-import routes, { Component, LayoutComponent, Routes } from '@/routes';
-import { Metadata } from 'next';
+import routeDef from '@/routes';
+import { Component } from '@/routesBase';
+import { RouteDef } from '@/routesBase';
+import { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 
 type FlatRoutes = (readonly [string[], Component<object>, Metadata])[];
 
-const flattenRoutes = (
-  routes: Routes,
-  baseParts: string[] = [],
-  baseLayout: LayoutComponent = ({ children }) => children
-): FlatRoutes => {
+const flattenRouteDef = (routeDef: RouteDef, baseParts: string[] = []): FlatRoutes => {
+  const page = routeDef.page;
+  const routes = routeDef.routes;
   return [
-    ...routes.flatMap(([path, { page, routes, Layout: OwnLayout }]) => {
-      const parts = [...baseParts, ...path.split('/').filter((e) => e)];
-      const Layout: LayoutComponent = OwnLayout
-        ? ({ children }) =>
-            baseLayout({ children: OwnLayout({ children: children }) })
-        : baseLayout;
-      return [
-        ...(page
-          ? ([
-              [
-                parts,
-                async (props: object) =>
-                  Layout({ children: page.Component(props) }),
-                page.metadata
-              ]
-            ] as const)
-          : []),
-        ...(routes ? flattenRoutes(routes, parts, Layout) : [])
-      ];
-    })
+    ...(page ? ([[baseParts, page.Component, page.metadata]] as const) : []),
+    ...(routes
+      ? Object.entries(routes).flatMap(([path, routeDef]) => {
+          const parts = [...baseParts, ...path.slice(0, -1).split('/')];
+          return flattenRouteDef(routeDef, parts);
+        })
+      : []),
   ];
 };
 
-const flatRoutes = flattenRoutes(routes);
+const flatRoutes = flattenRouteDef(routeDef);
 
 export async function generateStaticParams() {
   return flatRoutes.map(([parts]) => ({
-    url: parts
+    url: parts,
   }));
 }
 
@@ -63,32 +50,32 @@ const createRoutesMapping = () => {
 const routesMapping = createRoutesMapping();
 
 const getRoute = (url: string[] | undefined) => {
-  return (url || []).reduce(
-    (mapping, part) => mapping.routes[part],
-    routesMapping
-  ).page;
+  let current = routesMapping;
+
+  for (const part of url ?? []) {
+    const next = current.routes?.[part];
+    if (next === undefined) return 'notFound';
+    current = next;
+  }
+
+  return current.page ?? 'notFound';
 };
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ url: string[] }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ url: string[] }> }) {
   const { url } = await params;
 
   const page = getRoute(url);
+  if (page === 'notFound') return notFound();
 
   return page?.metadata;
 }
 
-export default async function UrlPage({
-  params
-}: {
-  params: Promise<{ url?: string[] }>;
-}) {
+export default async function UrlPage({ params }: { params: Promise<{ url?: string[] }> }) {
   const { url } = await params;
 
   const page = getRoute(url);
+
+  if (page === 'notFound') return notFound();
 
   return page ? <page.Component /> : notFound();
 }
