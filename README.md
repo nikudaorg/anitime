@@ -36,3 +36,40 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Sitemap.xml placeholder:
+
+```bash
+    <!-- EN -->
+  <url>
+    <loc>https://anitimefest.com/en/placeholder</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/placeholder" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- RU -->
+  <url>
+    <loc>https://anitimefest.com/ru/placeholder</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/placeholder" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HE -->
+  <url>
+    <loc>https://anitimefest.com/he/placeholder</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/placeholder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/placeholder" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+```

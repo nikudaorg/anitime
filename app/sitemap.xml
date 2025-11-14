@@ -37,4 +37,103 @@
     <priority>0.9</priority>
   </url>
 
+    <!-- EN -->
+  <url>
+    <loc>https://anitimefest.com/en/movies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- RU -->
+  <url>
+    <loc>https://anitimefest.com/ru/movies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HE -->
+  <url>
+    <loc>https://anitimefest.com/he/movies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+      <!-- EN -->
+  <url>
+    <loc>https://anitimefest.com/en/movies/international</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies/international" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- RU -->
+  <url>
+    <loc>https://anitimefest.com/ru/movies/international</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies/international" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HE -->
+  <url>
+    <loc>https://anitimefest.com/he/movies/international</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies/international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies/international" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+      <!-- EN -->
+  <url>
+    <loc>https://anitimefest.com/en/movies/israeli</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies/israeli" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- RU -->
+  <url>
+    <loc>https://anitimefest.com/ru/movies/israeli</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies/israeli" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HE -->
+  <url>
+    <loc>https://anitimefest.com/he/movies/israeli</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anitimefest.com/en/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://anitimefest.com/ru/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://anitimefest.com/he/movies/israeli"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anitimefest.com/movies/israeli" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
