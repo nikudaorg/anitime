@@ -29,7 +29,7 @@ export default function MovieCard({
           style={{ objectFit: 'contain', objectPosition: 'center' }}
         />
       </div>
-      <div className={styles.right}>
+      <div className={styles.right} style={locale === 'he' ? { direction: 'rtl' } : undefined}>
         <div className={styles.title}>{title}</div>
         <div className={styles.info}>
           <strong>
