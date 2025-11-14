@@ -46,6 +46,5 @@ export const metadataGen =
         description: seo.description,
         images: ['https://anitimefest.com/main-icon.png'],
       },
-      themeColor: '#2c1c51',
     };
   };

@@ -95,3 +95,7 @@ export default async function UrlPage({
 
 export const dynamic = 'force-static';
 export const revalidate = false;
+
+export const viewport: Viewport = {
+  themeColor: '#2c1c51',
+};
