@@ -1,11 +1,11 @@
 .root {
   /* height: 100%; */
   position: relative;
-  width: 100%;
+  width: 100vw;
 }
 
 .root img {
-  width: 100%;
+  width: 100vw;
   /* height: 100%; */
   object-fit: cover;
 }
@@ -57,9 +57,9 @@
     left: 55.2vw;
   }
   .root h1, .titleShadow {
-    font-size: 9.75vw;
+    font-size: 9.8vw;
     top: 4.235vw;
-    left: 58vw;
+    left: 58.5vw;
     letter-spacing: 0.07em;
   }
 }
@@ -83,10 +83,10 @@
     left: 38vw;
   }
   .root h1, .titleShadow {
-    font-size: 17.5vw;
-    top: 11.625vw;
-    left: 50vw;
-    letter-spacing: -0.014em;
+    font-size: 17.2vw;
+    top: 11.925vw;
+    left: 50.5vw;
+    letter-spacing: 0em;
   }
 }
 
@@ -110,8 +110,8 @@
   }
   .root h1, .titleShadow {
     font-size: 17.5vw;
-    top: 22.725vw;
-    left: 42vw;
-    letter-spacing: -0.004em;
+    top: 23.025vw;
+    left: 43.2vw;
+    letter-spacing: 0em;
   }
 }
