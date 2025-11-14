@@ -27,6 +27,7 @@ export default function MovieCard({
           fill
           alt=""
           style={{ objectFit: 'contain', objectPosition: 'center' }}
+          loading="lazy"
         />
       </div>
       <div className={styles.right} style={locale === 'he' ? { direction: 'rtl' } : undefined}>
