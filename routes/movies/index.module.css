@@ -40,6 +40,26 @@
   /* background-color: var(--color-surface-dark); */
 }
 
+.homeButton {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  color: rgba(255, 255, 255, 1); /* half-transparent */
+  cursor: pointer;
+
+  /* optional but improves usability */
+  transition: opacity 0.2s ease;
+  z-index: 12;
+}
+
+.homeButton:hover {
+  opacity: 0.8; /* simple feedback */
+}
+
 .banner h1 {
   position: absolute;
   top: 50%;
@@ -84,6 +104,9 @@
   .titleBg {
     height: 16rem;
     width: 36rem;
+  }
+  .homeButton {
+    position: fixed;
   }
 }
 

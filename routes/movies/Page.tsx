@@ -12,6 +12,7 @@ import MovieCard from './MovieCard';
 import { movies } from './data/object';
 import locales from '@/locales';
 import { R } from '@/routes';
+import { Home } from 'lucide-react';
 
 const israeliPath = 'israeli';
 const internationalPath = 'international';
@@ -52,6 +53,9 @@ function MoviesPage({
         <div className={styles.banner}>
           <h1>{messages.movies.title}</h1>
           <div className={styles.titleBg} />
+          <a href={`/${locale}`}>
+            <Home className={styles.homeButton} />
+          </a>
         </div>
         <div className={styles.menu}>
           <Link href={israeliHref} className={category === 'israeli' ? styles.active : undefined}>
