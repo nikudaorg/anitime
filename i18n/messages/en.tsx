@@ -60,7 +60,7 @@ export default {
   menu: {
     submitYourFilm: 'SUBMIT YOUR FILM',
     buyTickets: 'BUY TICKETS',
-    films: 'FILMS',
+    films: 'MOVIES',
     aboutFestival: 'ABOUT FESTIVAL',
     marketParticipants: 'MARKET PARTICIPANTS',
     team: 'TEAM',

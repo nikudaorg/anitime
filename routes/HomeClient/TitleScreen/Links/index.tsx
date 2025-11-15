@@ -18,9 +18,7 @@ const useLinks = (
   return (
     <div className={styles.root}>
       <div className={styles.firstLine}>
-        <a href="https://filmfreeway.com/anitime" target="_blank" rel="noopener noreferrer">
-          {messages.menu.submitYourFilm}
-        </a>
+        <Link href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</Link>
         <a
           href={messages.buyTicketsLink}
           target="_blank"
@@ -36,7 +34,9 @@ const useLinks = (
         <a href="#" onClick={onChangeLanguageClick} className={styles.globeLink}>
           <Globe className={styles.globe} />
         </a>
-        <Link href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</Link>
+        <a href="https://filmfreeway.com/anitime" target="_blank" rel="noopener noreferrer">
+          {messages.menu.submitYourFilm}
+        </a>
         <a href="#" onClick={onShowScheduleClick}>
           {messages.menu.schedule}
         </a>
