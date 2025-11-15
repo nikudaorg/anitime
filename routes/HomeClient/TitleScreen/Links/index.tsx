@@ -7,6 +7,7 @@ import Schedule from './Schedule';
 import { Globe } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
 import Link from 'next/link';
+import useUrlState from './useUrlState';
 
 const useLinks = (
   locale: Locale,
@@ -90,7 +91,12 @@ const Links = ({
     };
   }, [listenScroll, onScroll]);
   const [isScheduleShown, setIsScheduleShown] = useState<boolean>(false);
-  const [isLanguageSwitchShown, setIsLanguageSwitchShown] = useState<boolean>(false);
+  const [isLanguageSwitchShown, setIsLanguageSwitchShown] = useUrlState(
+    'langSwitch',
+    false as const,
+    (value, toDefault) => (value === 'shown' ? (true as const) : toDefault()),
+    () => 'shown'
+  );
   return (
     <>
       <div className={`${styles.visible}${isFixed ? ` ${styles.fixed}` : ''}`}>
