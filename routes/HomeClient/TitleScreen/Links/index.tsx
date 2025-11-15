@@ -32,7 +32,7 @@ const useLinks = (
 
       <div className={styles.secondLine}>
         {/* <a>{messages.menu.films}</a> */}
-        <a href="#" onClick={onChangeLanguageClick} className={styles.globeLink}>
+        <a onClick={onChangeLanguageClick} className={styles.globeLink}>
           <Globe className={styles.globe} />
         </a>
         <a href="https://filmfreeway.com/anitime" target="_blank" rel="noopener noreferrer">
