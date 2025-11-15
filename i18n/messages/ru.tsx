@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import AboutFestivalDecos from '../decorations/aboutFestival';
 import ProgramLongDecos from '../decorations/program/Long';
 
@@ -32,7 +33,9 @@ export default {
     content: (
       <>
         <ProgramLongDecos />
-        <h3>🎞️ Показы анимационных фильмов</h3>
+        <h3>
+          <Link href="/ru/movies">🎞️ Показы анимационных фильмов</Link>
+        </h3>
         <p>
           Израильская и международная конкурсные программы — лучшие анимационные работы последних
           лет из Израиля и со всего мира. В 21:00 состоится церемония награждения победителей
