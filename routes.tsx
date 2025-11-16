@@ -33,6 +33,7 @@ export type R = (
 
 import { Amatic_SC } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 const amaticSC = Amatic_SC({
   weight: ['400', '700'],
@@ -42,6 +43,7 @@ const amaticSC = Amatic_SC({
 function Layout({ children, locale }: { children: ReactNode; locale: Locale }) {
   return (
     <html lang={locale}>
+      <Analytics />
       <body className={`${amaticSC.className} antialiased`}>{children}</body>
     </html>
   );
