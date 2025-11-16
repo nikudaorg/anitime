@@ -2,7 +2,6 @@ import { getMessages, Locale } from '@/i18n';
 import { metadataGen } from '../generateMetadata';
 import styles from './index.module.css';
 import designScheme from '../HomeClient/designScheme.module.css';
-import banner from './banner/original.png';
 import small from './banner/small.webp';
 import medium from './banner/medium.webp';
 import large from './banner/large.webp';
