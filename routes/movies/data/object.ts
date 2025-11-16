@@ -101,9 +101,9 @@ const moviesObject = {
     },
     type: 'international',
   },
-  COSMICAT: {
+  Cosmicat: {
     title: {
-      en: 'COSMICAT',
+      en: 'Cosmicat',
       ru: 'Космикот',
       he: 'קוסמיקט',
     },
@@ -365,8 +365,8 @@ const moviesObject = {
   'ima wa ima': {
     title: {
       en: 'ima wa ima (now is now)',
-      ru: 'Ima wa ima (Сейчас — это сейчас)',
-      he: 'אימה וה אימה (עכשיו זה עכשיו)',
+      ru: 'ima wa ima (Сейчас — это сейчас)',
+      he: 'ima wa ima (עכשיו זה עכשיו)',
     },
     author: {
       en: 'Chun Yam Keung',
@@ -621,9 +621,9 @@ const moviesObject = {
     },
     type: 'israeli',
   },
-  'MY SHADOW AND ME': {
+  'My Shadow and Me': {
     title: {
-      en: 'MY SHADOW AND ME',
+      en: 'My Shadow and Me',
       ru: 'Моя тень и я',
       he: 'הצל שלי ואני',
     },
@@ -708,23 +708,295 @@ const moviesObject = {
     },
     type: 'israeli',
   },
+  'Sock Horror': {
+    title: {
+      en: 'Sock Horror',
+      ru: 'Носочный Хоррор',
+      he: 'אימת הגרביים',
+    },
+    author: {
+      en: 'Sun Ezer and Itai Garzon',
+      ru: 'Сун Эзер и Итай Гарзон',
+      he: 'סאן עזר ואיתי גרזון',
+    },
+    duration: {
+      en: '5 min.',
+      ru: '5 минут',
+      he: '5 דקות',
+    },
+    synopsis: {
+      en: [
+        'A shady man crawls into a washing machine to find his lost sock and is pulled into a dark world of forgotten socks. There, his old sock confronts him with an unforgettable surprise that forces him to grasp what being a sock truly means.',
+      ],
+      ru: [
+        'Подозрительный мужчина лезет в стиральную машину в поисках потерянного носка и оказывается в тёмном мире забытых носков. Там старый носок преподносит ему незабываемый сюрприз, заставляя понять, что на самом деле означает быть носком.',
+      ],
+      he: [
+        'גבר מעט מפוקפק זוחל למכונת הכביסה כדי למצוא את הגרב האבודה ונקלע לעולם קודר של גרביים שנשכחו. שם הגרב הישנה מפתיעה אותו בהפתעה בלתי-נשכחת, שמאלצת אותו להבין מה באמת פירושו להיות גרב.',
+      ],
+    },
+    type: 'israeli',
+  },
+  'Savta and I': {
+    title: {
+      en: 'Savta and I',
+      ru: 'Бабуля и я',
+      he: 'סבתא ואני',
+    },
+    author: {
+      en: 'Tomer Shaham',
+      ru: 'Томэр Шахам',
+      he: 'תומר שחם',
+    },
+    duration: {
+      en: '8 min.',
+      ru: '8 минут',
+      he: '8 דקות',
+    },
+    synopsis: {
+      en: [
+        "One morning, while eating his breakfast, Tomer notices that his grandmother's nose fell in the pan. While he tries to fix her, she asks him to kill her.",
+      ],
+      ru: [
+        'Однажды утром, во время завтрака, Томэр замечает, что нос его бабушки упал в сковороду. Пока он пытается её починить, она просит его убить её.',
+      ],
+      he: [
+        'בוקר אחד, בזמן ארוחת הבוקר, תומר שם לב שהאף של סבתא שלו נפל לתוך המחבת. בזמן שהוא מנסה לתקן אותה, היא מבקשת ממנו להרוג אותה.',
+      ],
+    },
+    type: 'israeli',
+  },
+  'No Witches in the Valley': {
+    title: {
+      en: 'No Witches in the Valley',
+      ru: 'Нет ведьм в долине',
+      he: 'אין מכשפות בעמק',
+    },
+    author: {
+      en: 'Ayla Shrot, Yael Ozsini',
+      ru: 'Айла Шрот, Яэль Озсини',
+      he: 'אילה שרוט, יעל עוזסיני',
+    },
+    duration: {
+      en: '13 min.',
+      ru: '13 минут',
+      he: '13 דקות',
+    },
+    synopsis: {
+      en: [
+        '“No Witches in the Valley” is a story about intergenerational trauma and the ability to overcome it. It is a love letter to my grandmother, whose voice was erased from the pages of history.',
+      ],
+      ru: [
+        '«Нет ведьм в долине» — это история о межпоколенческой травме и способности преодолеть её. Это письмо-посвящение моей бабушке, чей голос был стёрт со страниц истории.',
+      ],
+      he: [
+        '"אין מכשפות בעמק" הוא סיפור על טראומה בין-דורית והיכולת לריפוי, הסרט הוא מכתב אהבה לסבתי שקולה נמחק מההיסטוריה.',
+      ],
+    },
+    type: 'israeli',
+  },
+  'Milk Flowing Land': {
+    title: {
+      en: 'Milk Flowing Land',
+      ru: 'Земля, где течет молоко',
+      he: 'ארץ זבת חלב',
+    },
+    author: {
+      en: 'Stav Friedman, Esther Pakowitz, Roni Zelinger, Stav Alfasi',
+      ru: 'Став Фридман, Эстер Паковиц, Рони Зелингер, Амит',
+      he: 'סתיו פרידמן, אסתר פאקוויץ, רוני זלינגר, עמית',
+    },
+    duration: {
+      en: '2 min.',
+      ru: '2 минуты',
+      he: '2 דקות',
+    },
+    synopsis: {
+      en: [
+        'In an absurd reality of a supermarket, routine is mixed with war. We are supposed to continue going to work, shopping, and returning home as usual, even though nothing is normal anymore.',
+      ],
+      ru: [
+        'Ночью, в абсурдной реальности, рутина смешивается с войной. Мы должны продолжать ходить на работу, делать покупки и возвращаться домой, как будто всё в порядке, хотя на самом деле ничего уже не нормально.',
+      ],
+      he: [
+        'לילה אחד בסופרמרקט במציאות אבסורדית, שבה השגרה מתערבבת עם המלחמה. אנחנו אמורים להמשיך ללכת לעבודה, לקנות ולחזור הביתה כרגיל, למרות ששום דבר כבר לא נורמלי.',
+      ],
+    },
+    type: 'israeli',
+  },
+  "Salamander's land": {
+    title: {
+      en: "Salamander's land",
+      ru: 'Земля саламандр',
+      he: 'ארץ הסלמנדרות',
+    },
+    author: {
+      en: 'Ekaterina Ulyanova',
+      ru: 'Екатерина Ульянова',
+      he: 'יקטרינה אוליאנובה',
+    },
+    duration: {
+      en: '9 min.',
+      ru: '9 мин.',
+      he: '9 דקות',
+    },
+    synopsis: {
+      en: [
+        'A soldier on the battlefield falls unconscious, and when he opens his eyes, finds himself in the Salamander’s Land. A story inspired by R. Akutagawa\'s "In the Land of the Watermen" and K. Chapek\'s "The War with Salamanders".',
+      ],
+      ru: [
+        'Солдат на поле боя теряет сознание, а очнувшись, обнаруживает себя в Земле саламандр. История вдохновлена произведениями Рюноскэ Акутагавы «В стране водяных людей» и Карела Чапека «Война с саламандрами».',
+      ],
+      he: [
+        'חייל בשדה הקרב מאבד את ההכרה, וכשהוא מתעורר – הוא מוצא את עצמו בארץ הסלמנדרות. סיפור בהשראת ריונוסקה אקוטגאווה "בארץ אנשי המים" וקארל צ\'אפק "המלחמה עם הסלמנדרות".',
+      ],
+    },
+    type: 'international',
+  },
+  Playboy: {
+    title: {
+      en: 'Playboy',
+      ru: 'Плейбой',
+      he: 'פלייבוי',
+    },
+    author: {
+      en: 'Nadia Samarina',
+      ru: 'Надя Самарина',
+      he: 'נדיה סמרינה',
+    },
+    duration: {
+      en: '2 min.',
+      ru: '2 минуты',
+      he: '2 דקות',
+    },
+    synopsis: {
+      en: [
+        'Moscow, 1980. An elderly cleaner prepares the art-filled museum halls before visitors arrive. She knows and loves her work. Guests often forget trivial items, but this time an unexpected object left among the artworks startles her and disrupts her routine.',
+      ],
+      ru: [
+        'Москва, 1980 год. Пожилая уборщица готовит заполненные произведениями искусства музейные залы к приходу посетителей. Она хорошо знает и любит свою работу. Гости нередко забывают пустяки, но на этот раз забытый предмет среди экспонатов ошеломляет её и нарушает привычный порядок.',
+      ],
+      he: [
+        'מוסקבה, 1980. מנקה מבוגרת מכינה את אולמות המוזיאון המלאים ביצירות אמנות לפני הגעת המבקרים. היא מכירה ואוהבת את עבודתה. לרוב נשכחים חפצים פשוטים, אך הפעם פריט בלתי צפוי שנותר בין היצירות מפתיע אותה ומשבש את שגרתה.',
+      ],
+    },
+    type: 'international',
+  },
+  'Long-Term Extramarital Affair': {
+    title: {
+      en: 'Long-Term Extramarital Affair',
+      ru: 'Долгосрочная внебрачная связь',
+      he: 'רומן מחוץ לנישואים לטווח ארוך',
+    },
+    author: {
+      en: 'Neely Goniodsky',
+      ru: 'Нили Гониодски',
+      he: 'נילי גוניודסקי',
+    },
+    duration: {
+      en: '4 min.',
+      ru: '4 минуты',
+      he: '4 דקות',
+    },
+    synopsis: {
+      en: [
+        'The film that explores the absurd reality of being trapped in two unfulfilling relationships at once. A husband and his long-time mistress decide to attend couples’ therapy. By the end all characters emerge with more self-awareness, and a touch of acceptance.',
+      ],
+      ru: [
+        'Анимационный фильм, исследующий абсурдную реальность жизни в ловушке двух неудовлетворяющих отношений одновременно. Муж и его давняя любовница решают пойти на терапию для пар. К концу истории все персонажи обретают больше самопонимания и немного принятия.',
+      ],
+      he: [
+        'הסרט אנימציה קצר שבוחן את האבסורד שבלהיות תקועים בשני קשרים לא מספקים בו־זמנית. בעל והמאהבת הוותיקה שלו מחליטים ללכת לטיפול זוגי. בסוף, כל הדמויות יוצאות מהחוויה עם מודעות עצמית גדולה יותר ונגיעה של קבלה.',
+      ],
+    },
+    type: 'international',
+  },
 } satisfies MoviesObject;
 
 type MovieKey = keyof typeof moviesObject;
 
-const sorted = Object.entries(moviesObject).sort(
-  ([, a], [, b]) => a.synopsis.en.length - b.synopsis.en.length
-);
+type FilterKeys<
+  Type extends 'israeli' | 'international',
+  K extends MovieKey = MovieKey
+> = K extends unknown ? ((typeof moviesObject)[K]['type'] extends Type ? K : never) : never;
 
 const moviesOrder: {
-  israeli: (keyof typeof moviesObject)[];
-  international: (keyof typeof moviesObject)[];
-  common: (keyof typeof moviesObject)[];
+  israeli: FilterKeys<'israeli'>[];
+  international: FilterKeys<'international'>[];
+  common: MovieKey[];
 } = {
-  israeli: sorted.filter(([, a]) => a.type === 'israeli').map(([k]) => k as MovieKey),
-  international: sorted.filter(([, a]) => a.type === 'international').map(([k]) => k as MovieKey),
-  common: sorted.map(([k]) => k as MovieKey),
-} as const;
+  common: [
+    'Alyoshenka',
+    'Hertz',
+    'Butterfly Kiss',
+    'Cosmicat',
+    'Apart',
+    "Salamander's land",
+    'Coffee Break',
+    'Deadline',
+    'Remarks',
+    'Straight and in a Circle',
+    'Deep Dive',
+    'The Race',
+    'Milk Flowing Land',
+    'The Pangs of Mu',
+    'My Closet',
+    'Ugly',
+    'Playboy',
+    'ima wa ima',
+    'Long-Term Extramarital Affair',
+    'No Witches in the Valley',
+    'Taste of Heaven',
+    'Savta and I',
+    'Sock Horror',
+    'Bat Yam',
+    "Ma'avak",
+    'Carp',
+    'Stupid Dog',
+    'Until We Meet',
+    'A Paper Coffee Cup Story',
+    'My Shadow and Me',
+    'All About',
+  ],
+
+  international: [
+    'Alyoshenka',
+    'Hertz',
+    'Cosmicat',
+    "Salamander's land",
+    'Remarks',
+    'Straight and in a Circle',
+    'The Race',
+    'Ugly',
+    'ima wa ima',
+    'Long-Term Extramarital Affair',
+    'Playboy',
+    'Stupid Dog',
+    'The Pangs of Mu',
+    'My Closet',
+    'A Paper Coffee Cup Story',
+    'All About',
+  ],
+
+  israeli: [
+    'Apart',
+    'Butterfly Kiss',
+    'Coffee Break',
+    'Deadline',
+    'Deep Dive',
+    'No Witches in the Valley',
+    'Milk Flowing Land',
+    'Taste of Heaven',
+    'Bat Yam',
+    "Ma'avak",
+    'Savta and I',
+    'Sock Horror',
+    'Carp',
+    'Until We Meet',
+    'My Shadow and Me',
+  ],
+};
+
 
 const posters = Object.fromEntries(
   await Promise.all(
