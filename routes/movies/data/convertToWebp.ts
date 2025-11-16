@@ -33,14 +33,24 @@ function convert(input: string, output: string): Promise<void> {
 
 async function main() {
   const allFiles = await walk(ROOT);
-  const originals = allFiles.filter((f) => {
+
+  const originalFiles = allFiles.filter((f) => {
     const ext = path.extname(f).toLowerCase();
     return SUPPORTED_EXT.includes(ext) && path.basename(f).startsWith('original');
   });
 
-  for (const filePath of originals) {
+  for (const filePath of originalFiles) {
     const dir = path.dirname(filePath);
     const output = path.join(dir, '500xAAA.webp');
+
+    // Skip whole folder if already converted
+    try {
+      await fs.access(output);
+      console.log(`Skipping folder ${dir} (already converted).`);
+      continue;
+    } catch {
+      // file does not exist → convert
+    }
 
     console.log(`Converting: ${filePath} → ${output}`);
     await convert(filePath, output);
