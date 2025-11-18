@@ -45,7 +45,7 @@ function MoviesPage({
           <source srcSet={`${xl.src}`} media="(min-width: 1600px)" type="image/webp" />
           <source srcSet={`${large.src}`} media="(min-width: 1024px)" type="image/webp" />
           <source srcSet={`${medium.src}`} media="(min-width: 640px)" type="image/webp" />
-          <img src={small.src} alt="" />
+          <img src={small.src} alt="" draggable="false"/>
         </picture>
       </div>
       <div className={styles.content}>
