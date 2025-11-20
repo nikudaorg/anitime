@@ -8,11 +8,13 @@ import { Globe } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
 import Link from 'next/link';
 import useUrlState from './useUrlState';
+import Movies from './Movies';
 
 const useLinks = (
   locale: Locale,
   onShowScheduleClick: () => void,
   onChangeLanguageClick: () => void,
+  onShowMoviesClick: () => void,
   baseUrl: string
 ) => {
   const messages = getMessages(locale);
@@ -20,13 +22,12 @@ const useLinks = (
     <div className={styles.root}>
       <div className={styles.firstLine}>
         <Link href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</Link>
-        <a
-          href={messages.buyTicketsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.buyTickets}
-        >
-          {messages.menu.buyTickets}
+        <a onClick={onShowMoviesClick} className={styles.buyTickets}>
+          {locale === 'en'
+            ? 'Film distribution'
+            : locale === 'he'
+            ? 'תוכנית סרט'
+            : 'Распределение фильмов'}
         </a>
       </div>
 
@@ -38,9 +39,7 @@ const useLinks = (
         <a href="https://filmfreeway.com/anitime" target="_blank" rel="noopener noreferrer">
           {messages.menu.submitYourFilm}
         </a>
-        <a href="#" onClick={onShowScheduleClick}>
-          {messages.menu.schedule}
-        </a>
+        <a onClick={onShowScheduleClick}>{messages.menu.schedule}</a>
         <a href="#anitimeAbout">{messages.menu.aboutFestival}</a>
         {/* <a>{messages.menu.marketParticipants}</a> */}
         {/* <a>{messages.menu.team}</a> */}
@@ -90,26 +89,46 @@ const Links = ({
       cancelAnimationFrame(id);
     };
   }, [listenScroll, onScroll]);
-  const [isScheduleShown, setIsScheduleShown] = useState<boolean>(false);
+  const [isScheduleShown, setIsScheduleShown] = useUrlState(
+    'schedule',
+    false as const,
+    (value, toDefault) => (value === 'shown' ? (true as const) : toDefault()),
+    () => 'shown'
+  );
   const [isLanguageSwitchShown, setIsLanguageSwitchShown] = useUrlState(
     'langSwitch',
     false as const,
     (value, toDefault) => (value === 'shown' ? (true as const) : toDefault()),
     () => 'shown'
   );
+
+  const [isMoviesShown, setIsMoviesShown] = useUrlState(
+    'movies-program',
+    false as const,
+    (value, toDefault) => (value === 'shown' ? (true as const) : toDefault()),
+    () => 'shown'
+  );
+
+  const onChangeLanguageClick = useCallback(() => {
+    setIsLanguageSwitchShown(true);
+  }, [setIsLanguageSwitchShown]);
+
+  const onShowScheduleClick = useCallback(() => {
+    setIsScheduleShown(true);
+  }, [setIsScheduleShown]);
+
+  const onShowMoviesClick = useCallback(() => {
+    setIsMoviesShown(true);
+  }, [setIsMoviesShown]);
   return (
     <>
       <div className={`${styles.visible}${isFixed ? ` ${styles.fixed}` : ''}`}>
-        {useLinks(
-          locale,
-          () => setIsScheduleShown(true),
-          () => setIsLanguageSwitchShown(true),
-          baseUrl
-        )}
+        {useLinks(locale, onShowScheduleClick, onChangeLanguageClick, onShowMoviesClick, baseUrl)}
       </div>
       <div className={styles.plug} ref={plugRef}>
         {useLinks(
           locale,
+          () => {},
           () => {},
           () => {},
           baseUrl
@@ -117,6 +136,9 @@ const Links = ({
       </div>
       <div style={{ display: 'contents', visibility: isScheduleShown ? 'visible' : 'hidden' }}>
         <Schedule onClose={() => setIsScheduleShown(false)} locale={locale} />
+      </div>
+      <div style={{ display: 'contents', visibility: isMoviesShown ? 'visible' : 'hidden' }}>
+        <Movies onClose={() => setIsMoviesShown(false)} locale={locale} />
       </div>
       {isLanguageSwitchShown ? (
         <LanguageSwitch locale={locale} onClose={() => setIsLanguageSwitchShown(false)} url="" />

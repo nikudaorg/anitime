@@ -67,6 +67,7 @@
   margin: 0;
   font-weight: bold;
   transition: border-radius var(--animation-length);
+  cursor: pointer;
 }
 
 .firstLine a {
