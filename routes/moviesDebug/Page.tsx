@@ -1,7 +1,6 @@
 import { getMessages, Locale } from '@/i18n';
 import { R } from '@/routes';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import MovieCard from '../movies/MovieCard';
 import pageStyles from '../movies/index.module.css';
 import cardStyles from '../movies/MovieCard/index.module.css';
@@ -96,13 +95,13 @@ function DebugLinks({
         variants.map((nextVariant) => {
           const active = nextCategory === category && nextVariant === variant;
           return (
-            <Link
+            <a
               key={`${nextCategory}-${nextVariant}`}
               href={`/${locale}/movies-debug/${nextCategory}/${nextVariant}`}
               className={active ? pageStyles.active : undefined}
             >
               {nextCategory} {nextVariant}
-            </Link>
+            </a>
           );
         })
       )}

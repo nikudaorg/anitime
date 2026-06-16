@@ -6,7 +6,6 @@ import { getMessages, Locale } from '@/i18n';
 import Schedule from './Schedule';
 import { Globe } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
-import Link from 'next/link';
 import useUrlState from './useUrlState';
 import Movies from './Movies';
 
@@ -21,7 +20,7 @@ const useLinks = (
   return (
     <div className={styles.root}>
       <div className={styles.firstLine}>
-        <Link href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</Link>
+        <a href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</a>
         <a onClick={onShowMoviesClick} className={styles.buyTickets}>
           {locale === 'en'
             ? 'Find a film'

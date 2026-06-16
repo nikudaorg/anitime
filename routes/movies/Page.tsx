@@ -6,7 +6,6 @@ import small from './banner/small.webp';
 import medium from './banner/medium.webp';
 import large from './banner/large.webp';
 import xl from './banner/xl.webp';
-import Link from 'next/link';
 import MovieCard from './MovieCard';
 import { movies } from './data/object';
 import locales from '@/locales';
@@ -57,15 +56,15 @@ function MoviesPage({
           </a>
         </div>
         <div className={styles.menu}>
-          <Link href={israeliHref} className={category === 'israeli' ? styles.active : undefined}>
+          <a href={israeliHref} className={category === 'israeli' ? styles.active : undefined}>
             {messages.movies.israeli}
-          </Link>
-          <Link
+          </a>
+          <a
             href={internationalHref}
             className={category === 'international' ? styles.active : undefined}
           >
             {messages.movies.international}
-          </Link>
+          </a>
         </div>
         <div className={styles.movies}>
           {(category ? movies[category] : movies.common).map((movie, i) => (
