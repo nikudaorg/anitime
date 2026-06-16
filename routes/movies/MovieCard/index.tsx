@@ -1,6 +1,5 @@
 import { getMessages, Locale } from '@/i18n';
 import styles from './index.module.css';
-import Image from 'next/image';
 
 export default function MovieCard({
   locale,
@@ -21,13 +20,12 @@ export default function MovieCard({
   return (
     <div className={styles.root}>
       <div className={styles.img}>
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element -- Posters are pre-optimized static files; avoid next/image runtime on this route. */}
+        <img
           src={imgSrc}
-          unoptimized
-          fill
           alt=""
-          style={{ objectFit: 'contain', objectPosition: 'center' }}
           loading="lazy"
+          decoding="async"
         />
       </div>
       <div className={styles.right} style={locale === 'he' ? { direction: 'rtl' } : undefined}>
