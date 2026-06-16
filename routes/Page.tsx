@@ -4,7 +4,6 @@ import Information from './Information';
 
 import { metadataGen } from './generateMetadata';
 import { rMovies } from './movies/Page';
-import { rMoviesDebug } from './moviesDebug/Page';
 import { type R } from '@/routes';
 import Script from 'next/script';
 import getJsonLd from './json-ld';
@@ -31,6 +30,5 @@ export const rHome: R = (route, page) => ({
   })),
   routes: {
     ...route('movies/', rMovies),
-    ...route('movies-debug/', rMoviesDebug),
   },
 });
