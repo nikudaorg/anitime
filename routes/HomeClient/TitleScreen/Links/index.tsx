@@ -24,10 +24,10 @@ const useLinks = (
         <Link href={`/${locale}${baseUrl}movies`}>{messages.menu.films}</Link>
         <a onClick={onShowMoviesClick} className={styles.buyTickets}>
           {locale === 'en'
-            ? 'Film distribution'
+            ? 'Find a film'
             : locale === 'he'
-            ? 'תוכנית סרט'
-            : 'Распределение фильмов'}
+              ? 'תוכנית סרט'
+              : 'Распределение фильмов'}
         </a>
       </div>
 
